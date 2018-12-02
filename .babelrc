@@ -1,0 +1,14 @@
+{
+  "presets": ["razzle/babel"],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib"
+      },
+      "transform-runtime"
+    ],
+    ["react-loadable/babel"]
+  ]
+}
