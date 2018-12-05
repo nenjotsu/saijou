@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Loadable from 'react-loadable';
+// import Loadable from 'react-loadable';
 import Input from 'antd/lib/input';
 import Button from 'antd/lib/button';
 import { Spring } from 'react-spring';
+// import 'antd/lib/input/style/css';
+// import 'antd/lib/button/style/css';
 
 const propTypes = {
   reduxAction: PropTypes.object,

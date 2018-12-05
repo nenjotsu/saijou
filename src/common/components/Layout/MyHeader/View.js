@@ -5,6 +5,9 @@ import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Radio from 'antd/lib/radio';
 import BrandLogo from '../../../images/navbar-logo.png';
+// import 'antd/lib/layout/style/css';
+// import 'antd/lib/menu/style/css';
+// import 'antd/lib/radio/style/css';
 
 const { Header } = Layout;
 const RadioButton = Radio.Button;
@@ -44,7 +47,6 @@ class MyHeaderView extends React.Component {
       dafaultMenu: e.key
     });
   };
-
   render() {
     const { dafaultMenu, defaultLanguage } = this.state;
     const { menuList = [] } = this.props;

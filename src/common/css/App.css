@@ -1,5 +1,24 @@
+/* @import '~antd/dist/antd.css'; */
+@import '~antd/es/grid/style/index.css';
+@import '~antd/es/layout/style/index.css';
+@import '~antd/es/radio/style/index.css';
+@import '~antd/es/button/style/index.css';
+@import '~antd/es/input/style/index.css';
+@import '~antd/es/menu/style/index.css';
+
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Domine|Inconsolata');
 
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+}
 .App {
   text-align: center;
 }
@@ -16,6 +35,7 @@
 
 .brand-logo {
   float: left;
+  padding: 10px;
 }
 
 .brand-logo-img {
@@ -31,6 +51,10 @@
   font-size: 1.5em;
   font-family: 'Inconsolata', monospace;
   text-transform: uppercase;
+}
+
+.ant-menu-item > a {
+  text-decoration: none;
 }
 
 .n-section {
