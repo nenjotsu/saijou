@@ -7,8 +7,20 @@ const enLang = {
         to: '/'
       },
       {
+        title: 'Courses',
+        to: '/courses'
+      },
+      {
+        title: 'Schedule',
+        to: '/schedule'
+      },
+      {
         title: 'About',
         to: '/about'
+      },
+      {
+        title: 'News',
+        to: '/news'
       },
       {
         title: 'Contact',
@@ -38,8 +50,20 @@ export default {
           to: '/'
         },
         {
+          title: 'Courses',
+          to: '/courses'
+        },
+        {
+          title: 'Schedule',
+          to: '/schedule'
+        },
+        {
           title: '約',
           to: '/about'
+        },
+        {
+          title: 'News',
+          to: '/news'
         },
         {
           title: '接触',

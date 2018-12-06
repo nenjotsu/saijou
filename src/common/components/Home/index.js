@@ -27,12 +27,37 @@ class Home extends Component {
     const { intl } = this.props;
     return (
       <main>
-        <section className="n-section">
+        <section className="n-section bg-white">
           <RSOnLoad>
             <div>
               <Welcome data={intl.messages.jumbotron} />
-              <Login />
             </div>
+          </RSOnLoad>
+        </section>
+        <section className="n-section bg-white">
+          <RSOnLoad>
+            <Login />
+          </RSOnLoad>
+        </section>
+        <section className="n-section bg-gray-001">
+          <RSOnLoad>
+            <Login />
+          </RSOnLoad>
+        </section>
+        <section className="n-section bg-white">
+          <RSOnLoad>
+            <Login />
+          </RSOnLoad>
+        </section>
+
+        <section className="n-section bg-maroon">
+          <RSOnLoad>
+            <Login />
+          </RSOnLoad>
+        </section>
+        <section className="n-section bg-white">
+          <RSOnLoad>
+            <Login />
           </RSOnLoad>
         </section>
       </main>

@@ -4,10 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 import Layout from 'antd/lib/layout';
 import Menu from 'antd/lib/menu';
 import Radio from 'antd/lib/radio';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
 import BrandLogo from '../../../images/navbar-logo.png';
-// import 'antd/lib/layout/style/css';
-// import 'antd/lib/menu/style/css';
-// import 'antd/lib/radio/style/css';
 
 const { Header } = Layout;
 const RadioButton = Radio.Button;
@@ -51,36 +50,46 @@ class MyHeaderView extends React.Component {
     const { dafaultMenu, defaultLanguage } = this.state;
     const { menuList = [] } = this.props;
     return (
-      <Header className="main-header">
-        <Link to="/">
-          <div className="brand-logo">
-            <img className="brand-logo-img" src={BrandLogo} alt="Brand Logo" />
-          </div>
-        </Link>
-        <div className="main-navbar">
-          <RadioGroup
-            defaultValue={defaultLanguage}
-            size="small"
-            onChange={this.switchLocale}
-          >
-            <RadioButton value="en-US">EN</RadioButton>
-            <RadioButton value="ja">JP</RadioButton>
-          </RadioGroup>
-        </div>
+      <Header className="main-header NavBar">
+        <Row>
+          <Col xs={24} s={4} md={4}>
+            <Link to="/">
+              <div className="brand-logo">
+                <img
+                  className="brand-logo-img"
+                  src={BrandLogo}
+                  alt="Brand Logo"
+                />
+              </div>
+            </Link>
+          </Col>
+          <Col xs={0} s={0} md={20}>
+            <div className="main-navbar">
+              <RadioGroup
+                defaultValue={defaultLanguage}
+                size="small"
+                onChange={this.switchLocale}
+              >
+                <RadioButton value="en-US">EN</RadioButton>
+                <RadioButton value="ja">JP</RadioButton>
+              </RadioGroup>
+            </div>
 
-        <div className="main-navbar">
-          <Menu
-            onClick={this.handleClick}
-            selectedKeys={[dafaultMenu]}
-            mode="horizontal"
-          >
-            {menuList.map(menu => (
-              <Menu.Item key={menu.title.toLowerCase()}>
-                <Link to={menu.to}>{menu.title}</Link>
-              </Menu.Item>
-            ))}
-          </Menu>
-        </div>
+            <div className="main-navbar">
+              <Menu
+                onClick={this.handleClick}
+                selectedKeys={[dafaultMenu]}
+                mode="horizontal"
+              >
+                {menuList.map(menu => (
+                  <Menu.Item key={menu.title.toLowerCase()}>
+                    <Link to={menu.to}>{menu.title}</Link>
+                  </Menu.Item>
+                ))}
+              </Menu>
+            </div>
+          </Col>
+        </Row>
       </Header>
     );
   }
