@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Home from '../components/Home';
-import * as intl from '../actions/intl';
+import Home from './View';
+import * as intl from '../../actions/intl';
 
 const mapStateToProps = state => ({
   intl: state.intl.default

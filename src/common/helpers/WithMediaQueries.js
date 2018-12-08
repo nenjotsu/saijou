@@ -3,7 +3,7 @@ import createMediaListener from './createMediaListener';
 
 const withMedia = Comp => {
   const media = createMediaListener({
-    big: '(min-width : 1025px)',
+    big: '(min-width : 1175px)',
     tiny: '(max-width: 600px)'
   });
 

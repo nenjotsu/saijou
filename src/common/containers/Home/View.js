@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loadable from 'react-loadable';
-import {
-  PhoneScreen,
-  TabletScreen,
-  MobileScreen,
-  DesktopScreen
-} from 'react-responsive-redux';
 import RSOnLoad from '../../transitions/OnLoad';
 
 const propTypes = {
@@ -18,20 +12,15 @@ const defaultProps = {
   intl: {}
 };
 
-const Welcome = Loadable({
-  loader: () => import('./Welcome'),
+const Jumbotron = Loadable({
+  loader: () => import('./components/Jumbotron'),
   loading: () => null
 });
 
 const Login = Loadable({
-  loader: () => import('../Login'),
+  loader: () => import('./components/Login'),
   loading: () => null
 });
-
-// const RSOnLoad = Loadable({
-//   loader: () => import('../../transitions/OnLoad'),
-//   loading: () => null
-// });
 
 class Home extends Component {
   render() {
@@ -40,19 +29,7 @@ class Home extends Component {
       <main>
         <section className="n-section bg-white">
           <RSOnLoad>
-            <div>
-              <Welcome data={intl.messages.jumbotron} />
-              <div>
-                <PhoneScreen>Phone Screen</PhoneScreen>
-                <TabletScreen>Tablet Screen</TabletScreen>
-                <MobileScreen>
-                  <div>You are a mobile device</div>
-                </MobileScreen>
-                <DesktopScreen>
-                  <div>You are a desktop</div>
-                </DesktopScreen>
-              </div>
-            </div>
+            <Jumbotron data={intl.messages.jumbotron} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-white">

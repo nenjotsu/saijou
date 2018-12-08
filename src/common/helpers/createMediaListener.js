@@ -23,6 +23,10 @@ export default media => {
   }, {});
 
   const mediaState = mediaKeys.reduce((state, key) => {
+    console.log('queryLists', queryLists);
+    if (queryLists[key] === undefined) {
+      return state;
+    }
     state[key] = queryLists[key].matches;
     return state;
   }, {});

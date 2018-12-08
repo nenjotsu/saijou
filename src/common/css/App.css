@@ -203,8 +203,69 @@ body {
   display: block;
 }
 
+.enroll-left {
+  padding-top: 7px;
+  position: fixed;
+  left: -22px;
+  width: 450px;
+}
+
+.red-btn,
+.red-btn:active,
+.red-btn:focus {
+  background: #ed2123;
+  color: #ffffff;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5em;
+  font-family: 'Cabin', sans-serif;
+  transition: all 0.2s;
+}
+
+.red-btn:hover {
+  background: #e58080;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.arrow-right {
+  margin-top: -5px;
+  float: right;
+  height: 36px;
+}
+
+/** Background */
+.jumbotron-bg {
+  width: 100%;
+  padding: 50px 10px;
+  z-index: -1;
+}
+
+/** Text */
+.jumbotron-text {
+  font-size: 3em;
+  font-family: 'Abril Fatface', cursive;
+  transition: all 0.2s;
+}
+.jumbotron-text > small {
+  font-family: 'Hiragino Sans GB';
+  transition: all 0.2s;
+}
+.txt-tiny {
+  font-size: 3em;
+  font-family: 'Abril Fatface', cursive;
+  transition: all 0.2s;
+}
+.txt-big {
+  font-size: 5em;
+  font-family: 'Abril Fatface', cursive;
+  transition: all 0.2s;
+}
+
 /** Tablet */
 .tablet-main-menu-text {
   font-size: 0.7em;
-  padding: 0 6px;
+  padding: 0 12px;
+  transition: all 0.2s;
 }
