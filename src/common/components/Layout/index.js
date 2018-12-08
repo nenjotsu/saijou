@@ -17,13 +17,13 @@ const MyFooter = Loadable({
 const ContentLayout = props => (
   <div>
     <Layout>
-      <Header className="main-header NavBar">
+      {/* <Header className="main-header NavBar">
         <MyHeader />
-      </Header>
+      </Header> */}
       <Content>{props.children}</Content>
-      <Footer className="main-footer bg-dark-maroon">
+      {/* <Footer className="main-footer bg-dark-maroon">
         <MyFooter />
-      </Footer>
+      </Footer> */}
     </Layout>
   </div>
 );

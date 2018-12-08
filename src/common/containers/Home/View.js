@@ -12,6 +12,10 @@ const defaultProps = {
   intl: {}
 };
 
+const ComingSoon = Loadable({
+  loader: () => import('./components/ComingSoon'),
+  loading: () => null
+});
 const Jumbotron = Loadable({
   loader: () => import('./components/Jumbotron'),
   loading: () => null
@@ -28,6 +32,11 @@ class Home extends Component {
     return (
       <main>
         <section className="n-section bg-white">
+          <RSOnLoad>
+            <ComingSoon />
+          </RSOnLoad>
+        </section>
+        {/* <section className="n-section bg-white">
           <RSOnLoad>
             <Jumbotron data={intl.messages.jumbotron} />
           </RSOnLoad>
@@ -57,7 +66,7 @@ class Home extends Component {
           <RSOnLoad>
             <Login />
           </RSOnLoad>
-        </section>
+        </section> */}
       </main>
     );
   }
