@@ -1,22 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
-import Layout from 'antd/lib/layout';
-import Menu from 'antd/lib/menu';
 import Radio from 'antd/lib/radio';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
+import Menu from 'antd/lib/menu';
+import withMedia from '../../../helpers/WithMediaQueries';
 import BrandLogo from '../../../images/navbar-logo.png';
 
-const { Header } = Layout;
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
 const propTypes = {
+  media: PropTypes.object,
   menuList: PropTypes.array
 };
 
 const defaultProps = {
+  media: {},
   menuList: []
 };
 
@@ -35,6 +36,11 @@ class MyHeaderView extends React.Component {
       defaultLanguage: props.intl.locale || 'en-US'
     };
   }
+
+  componentDidMount = () => {};
+
+  componentWillUnmount() {}
+
   switchLocale = e => {
     const lang = e.target.value;
     this.props.reduxAction.switchLocale(lang);
@@ -48,49 +54,55 @@ class MyHeaderView extends React.Component {
   };
   render() {
     const { dafaultMenu, defaultLanguage } = this.state;
-    const { menuList = [] } = this.props;
+    const { menuList = [], media } = this.props;
+    console.log('media :: ', media);
     return (
-      <Header className="main-header NavBar">
-        <Row>
-          <Col xs={24} s={4} md={4}>
-            <Link to="/">
-              <div className="brand-logo">
-                <img
-                  className="brand-logo-img"
-                  src={BrandLogo}
-                  alt="Brand Logo"
-                />
-              </div>
-            </Link>
-          </Col>
-          <Col xs={0} s={0} md={20}>
-            <div className="main-navbar">
-              <RadioGroup
-                defaultValue={defaultLanguage}
-                size="small"
-                onChange={this.switchLocale}
-              >
-                <RadioButton value="en-US">EN</RadioButton>
-                <RadioButton value="ja">JP</RadioButton>
-              </RadioGroup>
+      <Row>
+        <Col xs={0} lg={2} />
+        <Col xs={24} s={4} md={3} lg={4}>
+          <Link to="/">
+            <div className="brand-logo">
+              <img
+                className="brand-logo-img"
+                src={BrandLogo}
+                alt="Brand Logo"
+              />
             </div>
+          </Link>
+        </Col>
+        <Col xs={0} md={21} lg={16}>
+          <div className="main-navbar intl">
+            <RadioGroup
+              defaultValue={defaultLanguage}
+              size="small"
+              onChange={this.switchLocale}
+            >
+              <RadioButton value="en-US">EN</RadioButton>
+              <RadioButton value="ja">JP</RadioButton>
+            </RadioGroup>
+          </div>
 
-            <div className="main-navbar">
-              <Menu
-                onClick={this.handleClick}
-                selectedKeys={[dafaultMenu]}
-                mode="horizontal"
-              >
-                {menuList.map(menu => (
-                  <Menu.Item key={menu.title.toLowerCase()}>
+          <div className="main-navbar">
+            <Menu
+              onClick={this.handleClick}
+              selectedKeys={[dafaultMenu]}
+              mode="horizontal"
+            >
+              {menuList.map(menu => {
+                return (
+                  <Menu.Item
+                    key={menu.title.toLowerCase()}
+                    className={!media.big ? 'tablet-main-menu-text' : ''}
+                  >
                     <Link to={menu.to}>{menu.title}</Link>
                   </Menu.Item>
-                ))}
-              </Menu>
-            </div>
-          </Col>
-        </Row>
-      </Header>
+                );
+              })}
+            </Menu>
+          </div>
+        </Col>
+        <Col xs={0} lg={2} />
+      </Row>
     );
   }
 }
@@ -99,4 +111,4 @@ MyHeaderView.propTypes = propTypes;
 MyHeaderView.defaultProps = defaultProps;
 MyHeaderView.contextTypes = contextTypes;
 
-export default withRouter(MyHeaderView);
+export default withRouter(withMedia(MyHeaderView));

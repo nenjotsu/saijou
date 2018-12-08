@@ -3,8 +3,10 @@ import { Provider } from 'react-redux';
 import { match } from 'react-router';
 import { Capture } from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
+import { setMobileDetect, mobileParser } from 'react-responsive-redux';
 
 import { StaticRouter } from 'react-router-dom';
+import qs from 'qs';
 import compression from 'compression';
 import stats from '../../build/react-loadable.json';
 import configureStore from '../common/store/configureStore';
@@ -34,12 +36,16 @@ server
             redirectLocation.pathname + redirectLocation.search
           );
         } else if (renderProps) {
+          // const preloadedState = qs.parse(req.query);
           const context = {};
           const modules = [];
 
           const preloadedState = loadStateFromSessionStorage();
 
           const store = configureStore(preloadedState);
+          const { dispatch } = store;
+          const mobileDetect = mobileParser(req);
+          dispatch(setMobileDetect(mobileDetect));
           const markup = renderToString(
             <Provider store={store}>
               <Capture report={moduleName => modules.push(moduleName)}>
@@ -71,8 +77,8 @@ server
               <head>
                   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                   <meta charSet='utf-8' />
-                  <title>SSR Reactjs</title>
-                  <meta name="description" content="Description"/>
+                  <title>Saijou International Training Center, Inc.</title>
+                  <meta name="description" content="Japanese Language Training Center in Philippines, learn nihongo at Quezon City"/>
                   <meta name="viewport" content="width=device-width, initial-scale=1">
                    ${
                      assets.client.css

@@ -1,13 +1,16 @@
 import React from 'react';
+import RSOnLoad from '../transitions/OnLoad';
 
 class Schedule extends React.Component {
   render() {
     return (
-      <div className="Home">
+      <section className="n-section">
         <div className="Home-header">
-          <h2>Schedule page</h2>
+          <RSOnLoad>
+            <h2>Schedule page</h2>
+          </RSOnLoad>
         </div>
-      </div>
+      </section>
     );
   }
 }

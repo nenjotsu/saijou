@@ -1,6 +1,6 @@
-# SSR React (WIP)
+# Saijou International Training Center, Inc. (WIP)
 
-Reactjs with Server Side Rendering Boilerplate
+Reactjs with Server Side Rendering
 
 # What's inside?
 
@@ -22,8 +22,8 @@ Reactjs with Server Side Rendering Boilerplate
 # Usage
 
 ```bash
-git clone https://github.com/nenjotsu/ssr-reactjs.git
-cd ssr-reactjs
+git clone https://github.com/nenjotsu/saijou.git
+cd saijou
 ```
 
 ## Installation & Getting Started:
@@ -41,10 +41,6 @@ yarn start
 # Demo
 
 You can visit the [demo](http://13.229.183.214:3000)
-
-# Note
-
-I have also a Typescript version of this [here](https://github.com/nenjotsu/react-ssr-ts-boilerplate). But I will prioritise this ssr-reactjs before jumping again and continue the typescript version. Will keep you posted. Follow me in github for more updates. Thanks!
 
 # Contributing & Code of Conduct
 

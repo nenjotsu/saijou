@@ -1,19 +1,34 @@
 import React from 'react';
 import Layout from 'antd/lib/layout';
-import MyHeader from './MyHeader';
-import MyFooter from './MyFooter';
-// import 'antd/lib/layout/style/css';
+import Loadable from 'react-loadable';
 
-const { Content } = Layout;
+// const Layout = Loadable({
+//   loader: () => import('antd/lib/layout'),
+//   loading: () => null
+// });
+
+const { Content, Header, Footer } = Layout;
+
+const MyHeader = Loadable({
+  loader: () => import('./MyHeader'),
+  loading: () => null
+});
+
+const MyFooter = Loadable({
+  loader: () => import('./MyFooter'),
+  loading: () => null
+});
 
 const ContentLayout = props => (
   <div>
     <Layout>
-      <MyHeader />
-      <Layout>
-        <Content>{props.children}</Content>
-      </Layout>
-      <MyFooter />
+      <Header className="main-header NavBar">
+        <MyHeader />
+      </Header>
+      <Content>{props.children}</Content>
+      <Footer className="main-footer bg-dark-maroon">
+        <MyFooter />
+      </Footer>
     </Layout>
   </div>
 );

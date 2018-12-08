@@ -3,7 +3,6 @@ import RSOnLoad from '../transitions/OnLoad';
 
 class About extends React.Component {
   render() {
-    const show = true;
     return (
       <section className="n-section">
         <div className="Home-header">

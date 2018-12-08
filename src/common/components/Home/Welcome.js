@@ -2,7 +2,7 @@ import React from 'react';
 
 const Welcome = () => (
   <div>
-    <h2>Welcome to SSR ReactJS</h2>
+    <h2>Welcome</h2>
   </div>
 );
 

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import counter from './counter';
+import { reducer as responsiveReducer } from 'react-responsive-redux';
 import intlReducer from './intlReducer';
 
 const rootReducer = combineReducers({
-  counter,
-  intl: intlReducer
+  intl: intlReducer,
+  responsive: responsiveReducer
 });
 
 export default rootReducer;

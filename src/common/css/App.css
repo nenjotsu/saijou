@@ -53,6 +53,10 @@ body {
   float: right;
 }
 
+.intl {
+  margin-left: 20px;
+}
+
 .main-navbar > .ant-menu {
   line-height: 60px;
   font-size: 1.5em;
@@ -63,6 +67,34 @@ body {
 .ant-menu-item > a {
   text-decoration: none;
 }
+
+.ant-menu-horizontal > .ant-menu-item-selected > a,
+.ant-menu-horizontal > .ant-menu-item-selected > a:active,
+.ant-menu-horizontal > .ant-menu-item > a:hover {
+  color: #ff0000;
+}
+
+.ant-menu-horizontal > .ant-menu-item:hover,
+.ant-menu-horizontal > .ant-menu-submenu:hover,
+.ant-menu-horizontal > .ant-menu-item-active,
+.ant-menu-horizontal > .ant-menu-submenu-active,
+.ant-menu-horizontal > .ant-menu-item-open,
+.ant-menu-horizontal > .ant-menu-submenu-open,
+.ant-menu-horizontal > .ant-menu-item-selected,
+.ant-menu-horizontal > .ant-menu-submenu-selected {
+  border-bottom: 2px solid #ff0000;
+  color: #ff0000;
+}
+/* 
+.ant-radio-button-wrapper-checked {
+  color: #ff0000;
+}
+
+.ant-radio-button-wrapper-checked:first-child,
+.ant-radio-button-wrapper-checked:hover,
+.ant-radio-button-wrapper-checked {
+  border-color: #ff0000;
+} */
 
 .n-section {
   min-height: 800px;
@@ -169,4 +201,10 @@ body {
   width: 200px;
   margin-bottom: 5px;
   display: block;
+}
+
+/** Tablet */
+.tablet-main-menu-text {
+  font-size: 0.7em;
+  padding: 0 6px;
 }

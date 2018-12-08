@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loadable from 'react-loadable';
+import {
+  PhoneScreen,
+  TabletScreen,
+  MobileScreen,
+  DesktopScreen
+} from 'react-responsive-redux';
 import RSOnLoad from '../../transitions/OnLoad';
 
 const propTypes = {
@@ -22,6 +28,11 @@ const Login = Loadable({
   loading: () => null
 });
 
+// const RSOnLoad = Loadable({
+//   loader: () => import('../../transitions/OnLoad'),
+//   loading: () => null
+// });
+
 class Home extends Component {
   render() {
     const { intl } = this.props;
@@ -31,6 +42,16 @@ class Home extends Component {
           <RSOnLoad>
             <div>
               <Welcome data={intl.messages.jumbotron} />
+              <div>
+                <PhoneScreen>Phone Screen</PhoneScreen>
+                <TabletScreen>Tablet Screen</TabletScreen>
+                <MobileScreen>
+                  <div>You are a mobile device</div>
+                </MobileScreen>
+                <DesktopScreen>
+                  <div>You are a desktop</div>
+                </DesktopScreen>
+              </div>
             </div>
           </RSOnLoad>
         </section>
