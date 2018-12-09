@@ -16,16 +16,19 @@ if (module.hot) {
 }
 
 export default Loadable.preloadAll().then(() => {
-  const port = process.env.PORT || 3000;
+  // const port = process.env.PORT || 3000;
   const host = process.env.HOST || 'localhost';
+  const getEnv = c => process.env[c];
+  // app.listen(getEnv('PORT'));
+  console.log('PORT', getEnv('PORT'));
   return express()
     .use((req, res) => app.handle(req, res))
-    .listen(port, function(err) {
+    .listen(getEnv('PORT'), function(err) {
       if (err) {
         console.error(err);
         return;
       }
 
-      console.log(`> Started on ${host}:${port}`);
+      console.log(`> Started on ${host}:${getEnv('PORT')}`);
     });
 });
