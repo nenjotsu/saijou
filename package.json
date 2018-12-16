@@ -6,8 +6,8 @@
     "start": "razzle start",
     "build": "razzle build",
     "build:prod": "PORT=80 razzle build",
-    "start:prod": "PORT=80 NODE_ENV=production node build/server.js",
-    "deploy": "forever start ./node_modules/.bin/http-server ./build/server.js -d false",
+    "start:prod": "PORT=80 NODE_ENV=production nodemon build/server.js",
+    "deploy": "forever start -c nodemon build/server.js",
     "test": "razzle test --env=jsdom"
   },
   "dependencies": {

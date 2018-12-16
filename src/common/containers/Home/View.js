@@ -16,13 +16,43 @@ const ComingSoon = Loadable({
   loader: () => import('./components/ComingSoon'),
   loading: () => null
 });
+
 const Jumbotron = Loadable({
   loader: () => import('./components/Jumbotron'),
   loading: () => null
 });
 
-const Login = Loadable({
-  loader: () => import('./components/Login'),
+const Courses = Loadable({
+  loader: () => import('./components/Courses'),
+  loading: () => null
+});
+
+const Schedule = Loadable({
+  loader: () => import('./components/Schedule'),
+  loading: () => null
+});
+
+const FeaturedSensei = Loadable({
+  loader: () => import('./components/FeaturedSensei'),
+  loading: () => null
+});
+
+const LatestNews = Loadable({
+  loader: () => import('./components/LatestNews'),
+  loading: () => null
+});
+
+const PhotoGallery = Loadable({
+  loader: () => import('./components/PhotoGallery'),
+  loading: () => null
+});
+
+const EnrollNow = Loadable({
+  loader: () => import('./components/EnrollNow'),
+  loading: () => null
+});
+const Partners = Loadable({
+  loader: () => import('./components/Partners'),
   loading: () => null
 });
 
@@ -31,42 +61,52 @@ class Home extends Component {
     const { intl } = this.props;
     return (
       <main>
-        <section className="n-section bg-white">
+        {/* <section className="n-section bg-white">
           <RSOnLoad>
             <ComingSoon />
           </RSOnLoad>
-        </section>
-        {/* <section className="n-section bg-white">
+        </section> */}
+        <section className="n-section-jumbotron bg-white">
           <RSOnLoad>
             <Jumbotron data={intl.messages.jumbotron} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-white">
           <RSOnLoad>
-            <Login />
+            <Courses data={intl.messages.courses} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-gray-001">
           <RSOnLoad>
-            <Login />
+            <Schedule data={intl.messages.schedules} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-white">
           <RSOnLoad>
-            <Login />
+            <FeaturedSensei data={intl.messages.featuredSensei} />
           </RSOnLoad>
         </section>
 
         <section className="n-section bg-maroon">
           <RSOnLoad>
-            <Login />
+            <LatestNews data={intl.messages.schedules} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-white">
           <RSOnLoad>
-            <Login />
+            <PhotoGallery data={intl.messages.courses} />
           </RSOnLoad>
-        </section> */}
+        </section>
+        <section className="n-section-sm bg-gray-001">
+          <RSOnLoad>
+            <EnrollNow />
+          </RSOnLoad>
+        </section>
+        <section className="n-section bg-white">
+          <RSOnLoad>
+            <Partners data={intl.messages.courses} />
+          </RSOnLoad>
+        </section>
       </main>
     );
   }
