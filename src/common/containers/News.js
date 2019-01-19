@@ -1,14 +1,28 @@
 import React from 'react';
-import RSOnLoad from '../transitions/OnLoad';
 
 class News extends React.Component {
   render() {
     return (
       <section className="n-section">
         <div className="Home-header">
-          <RSOnLoad>
-            <h2>News page</h2>
-          </RSOnLoad>
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/saijou.com.ph/"
+            data-tabs="timeline"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/saijou.com.ph/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/saijou.com.ph/">
+                Saijou International Training Center, Inc.
+              </a>
+            </blockquote>
+          </div>
         </div>
       </section>
     );

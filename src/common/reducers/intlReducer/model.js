@@ -4,110 +4,94 @@ const enLang = {
     menuList: [
       {
         title: 'Home',
-        to: '/'
+        to: '/',
       },
       {
         title: 'Courses',
-        to: '/courses'
+        to: '/courses',
       },
       {
         title: 'Schedule',
-        to: '/schedule'
+        to: '/schedule',
       },
       {
         title: 'About',
-        to: '/about'
+        to: '/about',
       },
       {
         title: 'News',
-        to: '/news'
+        to: '/news',
       },
       {
         title: 'Contact',
-        to: '/contact'
-      }
+        to: '/contact',
+      },
     ],
     footerServicesList: [
       {
-        title: 'Home',
-        to: '/'
+        title: 'JLPT N5 - Level I',
+        to: '/courses/n5',
       },
       {
-        title: 'Courses',
-        to: '/courses'
+        title: 'JLPT N4 - Level II',
+        to: '/courses/n4',
       },
       {
-        title: 'Schedule',
-        to: '/schedule'
+        title: 'Business Nihongo I',
+        to: '/courses/nihongo1',
       },
       {
-        title: 'About',
-        to: '/about'
+        title: 'Business Nihongo II',
+        to: '/courses/nihongo2',
       },
       {
-        title: 'News',
-        to: '/news'
+        title: 'Translation',
+        to: '/services/translation',
       },
       {
-        title: 'Contact',
-        to: '/contact'
-      }
+        title: 'Interpretation',
+        to: '/services/interpretation',
+      },
+      {
+        title: 'JLPT & JTest Review',
+        to: '/services/jlpt-review',
+      },
+      {
+        title: 'Career Guidance',
+        to: '/services/career-guidance',
+      },
     ],
     footerCompanyList: [
       {
-        title: 'Home',
-        to: '/'
-      },
-      {
-        title: 'Courses',
-        to: '/courses'
-      },
-      {
         title: 'Schedule',
-        to: '/schedule'
+        to: '/schedule',
       },
       {
         title: 'About',
-        to: '/about'
+        to: '/about',
+      },
+      {
+        title: 'Blog',
+        to: '/blog',
       },
       {
         title: 'News',
-        to: '/news'
+        to: '/news',
       },
       {
         title: 'Contact',
-        to: '/contact'
-      }
+        to: '/contact',
+      },
     ],
     footerSupportList: [
       {
-        title: 'Home',
-        to: '/'
+        title: 'Support Center',
+        to: '/support-center',
       },
-      {
-        title: 'Courses',
-        to: '/courses'
-      },
-      {
-        title: 'Schedule',
-        to: '/schedule'
-      },
-      {
-        title: 'About',
-        to: '/about'
-      },
-      {
-        title: 'News',
-        to: '/news'
-      },
-      {
-        title: 'Contact',
-        to: '/contact'
-      }
     ],
     jumbotron: {
       tagline: 'Language CONNECTS People',
-      enrollLabel: 'Enroll Now'
+      enrollLabel: 'Enroll Now',
     },
     courses: [
       {
@@ -116,7 +100,7 @@ const enLang = {
         badgeTitle: 'N5 Level I',
         tag: 'Tesda Accredited',
         hours: '320 hours',
-        link: ''
+        link: '',
       },
       {
         title: 'JLPT N4 - Level II',
@@ -124,7 +108,7 @@ const enLang = {
         badgeTitle: 'N4 Level II',
         tag: 'Tesda Accredited',
         hours: '300 hours',
-        link: ''
+        link: '',
       },
       {
         title: 'Business Nihongo I',
@@ -132,7 +116,7 @@ const enLang = {
         badgeTitle: 'Nihongo I',
         tag: 'Certificate Courses',
         hours: '24 hours',
-        link: ''
+        link: '',
       },
       {
         title: 'Business Nihongo II',
@@ -140,8 +124,8 @@ const enLang = {
         badgeTitle: 'Nihongo II',
         tag: 'Certificate Courses',
         hours: '24 hours',
-        link: ''
-      }
+        link: '',
+      },
     ],
     schedules: [
       {
@@ -149,43 +133,43 @@ const enLang = {
         subTitle: 'Japanese Language & Culture',
         badgeTitle: 'JLPT N5 - Level I',
         hours: '8am - 3pm',
-        link: ''
+        link: '',
       },
       {
         title: 'Afternoon Class',
         subTitle: 'Japanese Language & Culture',
         badgeTitle: 'JLPT N5 - Level I',
         hours: '4pm - 9pm',
-        link: ''
+        link: '',
       },
       {
         title: 'Saturday Class',
         subTitle: 'Japanese Language & Culture',
         badgeTitle: 'N5, N4, Business Nihongo',
         hours: '8am - 5pm',
-        link: ''
-      }
+        link: '',
+      },
     ],
     featuredSensei: {
       tagline:
         'Students don’t care how much you know until they know how much you care.',
       name: 'Reina Sensei',
       content:
-        'Teaching is not just  demonstrating what do you know but also giving an inspiration and be part of their journey in Japanese Learning.What inspires me to teach Nihongo is the smile of every students.',
+        'Every Kanji has a story, and from there step by step the students will learn not just the Japanese language but also the culture',
       subContent:
-        'Come and visit our Training Center at Saijou International, see you there.',
+        'Come and visit us at Saijou International Japanese Training Center, see you there.',
       seeMore: 'see more...',
-      link: ''
-    }
-  }
+      link: '',
+    },
+  },
 };
 
 export default {
   default: {
-    ...enLang
+    ...enLang,
   },
   [`intl_${'en-US'}`]: {
-    ...enLang
+    ...enLang,
   },
   intl_ja: {
     locale: 'ja',
@@ -193,111 +177,111 @@ export default {
       menuList: [
         {
           title: 'ホーム',
-          to: '/'
+          to: '/',
         },
         {
           title: '接触ム',
-          to: '/courses'
+          to: '/courses',
         },
         {
           title: 'ホームム',
-          to: '/schedule'
+          to: '/schedule',
         },
         {
           title: '約',
-          to: '/about'
+          to: '/about',
         },
         {
           title: 'ムホーム',
-          to: '/news'
+          to: '/news',
         },
         {
           title: '接触',
-          to: '/contact'
-        }
+          to: '/contact',
+        },
       ],
       footerServicesList: [
         {
           title: 'Home',
-          to: '/'
+          to: '/',
         },
         {
           title: 'Courses',
-          to: '/courses'
+          to: '/courses',
         },
         {
           title: 'Schedule',
-          to: '/schedule'
+          to: '/schedule',
         },
         {
           title: 'About',
-          to: '/about'
+          to: '/about',
         },
         {
           title: 'News',
-          to: '/news'
+          to: '/news',
         },
         {
           title: 'Contact',
-          to: '/contact'
-        }
+          to: '/contact',
+        },
       ],
       footerCompanyList: [
         {
           title: 'Home',
-          to: '/'
+          to: '/',
         },
         {
           title: 'Courses',
-          to: '/courses'
+          to: '/courses',
         },
         {
           title: 'Schedule',
-          to: '/schedule'
+          to: '/schedule',
         },
         {
           title: 'About',
-          to: '/about'
+          to: '/about',
         },
         {
           title: 'News',
-          to: '/news'
+          to: '/news',
         },
         {
           title: 'Contact',
-          to: '/contact'
-        }
+          to: '/contact',
+        },
       ],
       footerSupportList: [
         {
           title: 'Home',
-          to: '/'
+          to: '/',
         },
         {
           title: 'Courses',
-          to: '/courses'
+          to: '/courses',
         },
         {
           title: 'Schedule',
-          to: '/schedule'
+          to: '/schedule',
         },
         {
           title: 'About',
-          to: '/about'
+          to: '/about',
         },
         {
           title: 'News',
-          to: '/news'
+          to: '/news',
         },
         {
           title: 'Contact',
-          to: '/contact'
-        }
+          to: '/contact',
+        },
       ],
       jumbotron: {
         tagline:
           '新しい言語は新しい人生です。サイエンスインターナショナルトレーニングセンターで日本語を学ぶ',
-        enrollLabel: '今すぐ登録する'
+        enrollLabel: '今すぐ登録する',
       },
       courses: [
         {
@@ -306,7 +290,7 @@ export default {
           badgeTitle: 'N5 Level I',
           tag: 'Tesda Accredited',
           hours: '320 hours',
-          link: ''
+          link: '',
         },
         {
           title: 'JLPT N4 - Level II',
@@ -314,7 +298,7 @@ export default {
           badgeTitle: 'N4 Level II',
           tag: 'Tesda Accredited',
           hours: '300 hours',
-          link: ''
+          link: '',
         },
         {
           title: 'Business Nihongo I',
@@ -322,7 +306,7 @@ export default {
           badgeTitle: 'Nihongo I',
           tag: 'Certificate Courses',
           hours: '24 hours',
-          link: ''
+          link: '',
         },
         {
           title: 'Business Nihongo II',
@@ -330,8 +314,8 @@ export default {
           badgeTitle: 'Nihongo II',
           tag: 'Certificate Courses',
           hours: '24 hours',
-          link: ''
-        }
+          link: '',
+        },
       ],
       schedules: [
         {
@@ -339,34 +323,34 @@ export default {
           subTitle: 'Japanese Language & Culture',
           badgeTitle: 'JLPT N5 - Level I',
           hours: '8am - 3pm',
-          link: ''
+          link: '',
         },
         {
           title: 'Afternoon Class',
           subTitle: 'Japanese Language & Culture',
           badgeTitle: 'JLPT N5 - Level I',
           hours: '4pm - 9pm',
-          link: ''
+          link: '',
         },
         {
           title: 'Saturday Class',
           subTitle: 'Japanese Language & Culture',
           badgeTitle: 'N5, N4, Business Nihongo',
           hours: '8am - 5pm',
-          link: ''
-        }
+          link: '',
+        },
       ],
       featuredSensei: {
         tagline:
           'Students don’t care how much you know until they know how much you care.',
         name: 'Reina Sensei',
         content:
-          'Teaching is not just  demonstrating what do you know but also giving an inspiration and be part of their journey in Japanese Learning.What inspires me to teach Nihongo is the smile of every students.',
+          'Every Kanji has a story, and from there step by step the students will learn not just the Japanese language but also the culture',
         subContent:
-          'Come and visit our Training Center at Saijou International, see you there.',
+          'Come and visit us at Saijou International Japanese Training Center, see you there.',
         seeMore: 'see more...',
-        link: ''
-      }
-    }
-  }
+        link: '',
+      },
+    },
+  },
 };

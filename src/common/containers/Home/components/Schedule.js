@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import withMedia from '../../../helpers/WithMediaQueries';
 import PrimaryButton from '../../../components/Button/Primary';
-import ScheduleImg from '../../../images/schedule-img.png';
+// import ScheduleImg from '../../../images/schedule-img.png';
+import ScheduleImg from '../../../images/schedule-display.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
 };
 
 const Schedule = ({ media, data }) => {
@@ -44,7 +46,9 @@ const Schedule = ({ media, data }) => {
               Or you can drop us a call:
             </p>
             <hr className="divider-md" />
-            <PrimaryButton label={'Contact Us'} />
+            <Link to="/contact">
+              <PrimaryButton label={'Contact Us'} />
+            </Link>
             <p className="contact-number">
               (02) 710 8710
               <br />
@@ -56,7 +60,7 @@ const Schedule = ({ media, data }) => {
           {data.map(sched => {
             return (
               <Col key={sched.title} xs={24} sm={12} md={8}>
-                <div className="wrapper-course">
+                {/* <div className="wrapper-course">
                   <div className="wrapper-course-badgetitle">
                     <p className="course-badgetitle">{sched.badgeTitle}</p>
                   </div>
@@ -65,7 +69,7 @@ const Schedule = ({ media, data }) => {
                     src={ScheduleImg}
                     alt="Icon of Course Item"
                   />
-                </div>
+                </div> */}
                 <p className="course-title">{sched.title}</p>
                 <p className="course-subtitle">{sched.subTitle}</p>
                 <p className="course-hours">{sched.hours}</p>

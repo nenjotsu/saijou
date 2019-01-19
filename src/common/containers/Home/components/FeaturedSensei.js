@@ -6,11 +6,11 @@ import withMedia from '../../../helpers/WithMediaQueries';
 import ScheduleImg from '../../../images/schedule-img.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
 };
 
 const FeaturedSensei = ({ media, data }) => {
@@ -27,21 +27,29 @@ const FeaturedSensei = ({ media, data }) => {
           <Col xs={24} md={10}>
             <h1>
               Featured <span className="txt-violet-001">Sensei</span>
-              <small>Meet the team</small>
+              <small>Meet the sensei</small>
             </h1>
             <p>{data.tagline}</p>
             <p>{data.content}</p>
             <p>{data.subContent}</p>
             <p>- {data.name}</p>
-            <a href="" className="see-more">
+            {/* <a href="" className="see-more">
               {data.seeMore}
-            </a>
+            </a> */}
           </Col>
           <Col xs={24} md={14}>
-            <img
+            {/* <img
               className="jumbotron-bg"
               src={ScheduleImg}
               alt="Icon of Course Item"
+            /> */}
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/i6A0TO7iGcg"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
             />
           </Col>
         </Row>

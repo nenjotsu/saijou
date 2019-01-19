@@ -5,55 +5,55 @@ import RSOnLoad from '../../transitions/OnLoad';
 
 const propTypes = {
   reduxAction: PropTypes.object.isRequired,
-  intl: PropTypes.object
+  intl: PropTypes.object,
 };
 
 const defaultProps = {
-  intl: {}
+  intl: {},
 };
 
 const ComingSoon = Loadable({
   loader: () => import('./components/ComingSoon'),
-  loading: () => null
+  loading: () => null,
 });
 
 const Jumbotron = Loadable({
   loader: () => import('./components/Jumbotron'),
-  loading: () => null
+  loading: () => null,
 });
 
 const Courses = Loadable({
   loader: () => import('./components/Courses'),
-  loading: () => null
+  loading: () => null,
 });
 
 const Schedule = Loadable({
   loader: () => import('./components/Schedule'),
-  loading: () => null
+  loading: () => null,
 });
 
 const FeaturedSensei = Loadable({
   loader: () => import('./components/FeaturedSensei'),
-  loading: () => null
+  loading: () => null,
 });
 
 const LatestNews = Loadable({
   loader: () => import('./components/LatestNews'),
-  loading: () => null
+  loading: () => null,
 });
 
 const PhotoGallery = Loadable({
   loader: () => import('./components/PhotoGallery'),
-  loading: () => null
+  loading: () => null,
 });
 
 const EnrollNow = Loadable({
   loader: () => import('./components/EnrollNow'),
-  loading: () => null
+  loading: () => null,
 });
 const Partners = Loadable({
   loader: () => import('./components/Partners'),
-  loading: () => null
+  loading: () => null,
 });
 
 class Home extends Component {
@@ -66,7 +66,7 @@ class Home extends Component {
             <ComingSoon />
           </RSOnLoad>
         </section> */}
-        <section className="n-section-jumbotron bg-white">
+        <section className="n-section-jumbotron bg-white cover-bg">
           <RSOnLoad>
             <Jumbotron data={intl.messages.jumbotron} />
           </RSOnLoad>

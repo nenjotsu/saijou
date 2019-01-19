@@ -17,21 +17,21 @@ const propTypes = {
   media: PropTypes.object,
   footerServicesList: PropTypes.array,
   footerCompanyList: PropTypes.array,
-  footerSupportList: PropTypes.array
+  footerSupportList: PropTypes.array,
 };
 
 const defaultProps = {
   media: {},
   footerServicesList: [],
   footerCompanyList: [],
-  footerSupportList: []
+  footerSupportList: [],
 };
 
 const MyFooter = ({
   media,
   footerServicesList,
   footerCompanyList,
-  footerSupportList
+  footerSupportList,
 }) => {
   const isTiny = media.tiny;
   const isBig = media.big;
@@ -75,10 +75,18 @@ const MyFooter = ({
               size="large"
               onSearch={value => console.log(value)}
             />
+
             <div className="footer-social">
-              <img src={FacebookGray} alt="facebook" />
-              <img src={TwitterGray} alt="twitter" />
-              <img src={YoutubeGray} alt="youtube" />
+              <a href="https://www.facebook.com/saijou.com.ph" target="_blank">
+                <img src={FacebookGray} alt="facebook" />
+              </a>
+              {/* <img src={Twitter} alt="twitter" /> */}
+              <a
+                href="https://www.youtube.com/channel/UCqUmLvhanyzw4x65d736aDA"
+                target="_blank"
+              >
+                <img src={YoutubeGray} alt="youtube" />
+              </a>
             </div>
 
             <img

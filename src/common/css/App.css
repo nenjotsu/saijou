@@ -338,10 +338,10 @@ h1 > small,
   width: 450px;
 }
 
-.red-btn,
-.red-btn:active,
-.red-btn:focus {
-  background: #ed2123;
+.primary-btn,
+.primary-btn:active,
+.primary-btn:focus {
+  background: #40b14a;
   color: #ffffff;
   height: 50px;
   border: none;
@@ -355,12 +355,12 @@ h1 > small,
   padding-top: 5px;
 }
 
-.red-btn > span {
+.primary-btn > span {
   margin-right: 10px;
 }
 
-.red-btn:hover {
-  background: #e58080;
+.primary-btn:hover {
+  background: #49b352;
   color: #ffffff;
   transition: all 0.2s;
 }
@@ -388,11 +388,21 @@ h1 > small,
   background-color: #ff00000f;
 }
 
+.cover-bg {
+  background-image: url(../../common/images/cover.png);
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /** Text */
 .jumbotron-tagline {
   font-size: 0.5em;
 }
 .jumbotron-text {
+  color: #ebeff0;
+  text-shadow: -8px 10px 37px rgba(0, 0, 0, 0.34);
   font-size: 3em;
   font-family: 'Abril Fatface', cursive;
   transition: all 0.2s;
@@ -454,13 +464,17 @@ h1 > small,
   margin-top: 30px;
 }
 
-.footer-social > img {
+.footer-social > a > img {
   width: 32px;
   margin: 10px;
   cursor: pointer;
   border: 1px solid #6d6d6d6e;
   border-radius: 33%;
   padding: 5px;
+}
+.footer-social > a > img:hover {
+  border: 1px solid #f74f4f;
+  padding: 4px;
 }
 
 .footer-logo {

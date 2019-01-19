@@ -33,7 +33,7 @@ server
         } else if (redirectLocation) {
           res.redirect(
             302,
-            redirectLocation.pathname + redirectLocation.search
+            redirectLocation.pathname + redirectLocation.search,
           );
         } else if (renderProps) {
           // const preloadedState = qs.parse(req.query);
@@ -53,12 +53,12 @@ server
                   <Routes />
                 </StaticRouter>
               </Capture>
-            </Provider>
+            </Provider>,
           );
 
           const finalState = {
             ...store.getState(),
-            ...preloadedState
+            ...preloadedState,
           };
 
           if (context.url) {
@@ -66,10 +66,10 @@ server
           } else {
             const bundles = getBundles(stats, modules);
             const chunks = bundles.filter(bundle =>
-              bundle.file.endsWith('.js')
+              bundle.file.endsWith('.js'),
             );
             const styles = bundles.filter(bundle =>
-              bundle.file.endsWith('.css')
+              bundle.file.endsWith('.css'),
             );
 
             res.send(`<!doctype html>
@@ -111,10 +111,18 @@ server
                       ? `<script src="/${chunk.file}"></script>`
                       : `<script src="http://${process.env.HOST}:${parseInt(
                           process.env.PORT,
-                          10
-                        ) + 1}/${chunk.file}"></script>`
+                          10,
+                        ) + 1}/${chunk.file}"></script>`,
                   )
                   .join('\n')}
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
                 <script>window.main();</script>
               </body>
           </html>`);
@@ -122,7 +130,7 @@ server
         } else {
           res.redirect('/404');
         }
-      }
+      },
     );
   });
 

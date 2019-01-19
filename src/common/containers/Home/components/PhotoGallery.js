@@ -5,14 +5,14 @@ import Col from 'antd/lib/col';
 import withMedia from '../../../helpers/WithMediaQueries';
 // import RightArrow from '../../../images/right-arrow.png';
 import CoursesItem from '../../../images/course-item.png';
-import IconInstagram from '../../../images/instagram.png';
+import Facebook from '../../../images/facebook.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
 };
 
 const PhotoGallery = ({ media, data }) => {
@@ -28,10 +28,16 @@ const PhotoGallery = ({ media, data }) => {
           <Col xs={24}>
             <p className="quote text-center">"Language CONNECTS People"</p>
             <p className="text-center">
-              <img className="icon-4x" src={IconInstagram} alt="Instagram" />
+              <a href="https://www.facebook.com/saijou.com.ph" target="_open">
+                <img className="icon-4x" src={Facebook} alt="Facebook" />
+              </a>
               <br />
-              <a href="" className="see-more">
-                Follow us on Instagram
+              <a
+                href="https://www.facebook.com/saijou.com.ph"
+                target="_open"
+                className="see-more"
+              >
+                Follow us on Facebook
               </a>
             </p>
             <hr className="divider-md" />

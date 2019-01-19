@@ -5,13 +5,41 @@ import Col from 'antd/lib/col';
 import withMedia from '../../../helpers/WithMediaQueries';
 // import RightArrow from '../../../images/right-arrow.png';
 import CoursesItem from '../../../images/course-item.png';
+import BirdImg from '../../../images/course-thumb-bird.png';
+import KoiImg from '../../../images/course-thumb-koi.png';
+import BonsaiImg from '../../../images/course-thumb-bonsai.png';
+import ShrineImg from '../../../images/course-thumb-shrine.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
+};
+
+const getCourseImg = badgeTitle => {
+  console.log('badgeTitle', badgeTitle);
+  let imgSrc = CoursesItem;
+  switch (badgeTitle) {
+    case 'N5 Level I':
+      imgSrc = BirdImg;
+      break;
+    case 'N4 Level II':
+      imgSrc = KoiImg;
+      break;
+    case 'Nihongo I':
+      imgSrc = BonsaiImg;
+      break;
+    case 'Nihongo II':
+      imgSrc = ShrineImg;
+      break;
+
+    default:
+      imgSrc = CoursesItem;
+      break;
+  }
+  return imgSrc;
 };
 
 const Courses = ({ media, data }) => {
@@ -31,10 +59,10 @@ const Courses = ({ media, data }) => {
               <small>Choose from our various services</small>
             </h1>
           </Col>
-          <Col xs={24} sm={12} push={6}>
-            <a href="" className="see-more">
+          <Col xs={24} sm={8} push={6}>
+            {/* <a href="" className="see-more">
               view more...
-            </a>
+            </a> */}
           </Col>
         </Row>
         <Row gutter={8} type="flex" justify="space-around" align="middle">
@@ -47,7 +75,7 @@ const Courses = ({ media, data }) => {
                   </div>
                   <img
                     className="jumbotron-bg"
-                    src={CoursesItem}
+                    src={getCourseImg(course.badgeTitle)}
                     alt="Icon of Course Item"
                   />
                 </div>
