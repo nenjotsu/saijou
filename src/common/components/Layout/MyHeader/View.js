@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Radio from 'antd/lib/radio';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import Menu from 'antd/lib/menu';
-import withMedia from '../../../helpers/WithMediaQueries';
+// import withMedia from '../../../helpers/WithMediaQueries';
 import BrandLogo from '../../../images/navbar-logo.png';
 
 const RadioButton = Radio.Button;
@@ -34,9 +34,9 @@ const contextTypes = {
 class MyHeaderView extends React.Component {
   constructor(props) {
     super(props);
-    const menu = props.location.pathname.replace('/', '');
+    // const menu = props.location.pathname.replace('/', '');
     this.state = {
-      dafaultMenu: menu || 'home',
+      dafaultMenu: 'home',
       defaultLanguage: props.intl.locale || 'en-US',
     };
   }
@@ -70,7 +70,7 @@ class MyHeaderView extends React.Component {
 
   render() {
     const { dafaultMenu, defaultLanguage } = this.state;
-    const { menuList = [], media } = this.props;
+    const { menuList = [] } = this.props;
     return (
       <Row>
         <Col xs={0} lg={2} />
@@ -107,7 +107,8 @@ class MyHeaderView extends React.Component {
                 return (
                   <Menu.Item
                     key={menu.title.toLowerCase()}
-                    className={!media.big ? 'tablet-main-menu-text' : ''}
+                    // className={!media.big ? 'tablet-main-menu-text' : ''}
+                    className="tablet-main-menu-text"
                   >
                     <Link to={menu.to}>{menu.title}</Link>
                   </Menu.Item>
@@ -126,4 +127,4 @@ MyHeaderView.propTypes = propTypes;
 MyHeaderView.defaultProps = defaultProps;
 MyHeaderView.contextTypes = contextTypes;
 
-export default withRouter(withMedia(MyHeaderView));
+export default MyHeaderView;
