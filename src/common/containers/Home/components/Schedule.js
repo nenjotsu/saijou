@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import PrimaryButton from '../../../components/Button/Primary';
-import ScheduleImg from '../../../images/schedule-display.png';
+import ScheduleImg from '../../../images/schedule-display.jpg';
 
 const propTypes = {
   media: PropTypes.object,

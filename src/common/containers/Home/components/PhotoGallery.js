@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import fb1Img from '../../../images/fb1.png';
-import fb2Img from '../../../images/fb2.png';
-import fb3Img from '../../../images/fb3.png';
-import fb4Img from '../../../images/fb4.png';
+import fb1Img from '../../../images/fb1.jpg';
+import fb2Img from '../../../images/fb2.jpg';
+import fb3Img from '../../../images/fb3.jpg';
+import fb4Img from '../../../images/fb4.jpg';
 import Facebook from '../../../images/facebook.png';
 
 const propTypes = {
