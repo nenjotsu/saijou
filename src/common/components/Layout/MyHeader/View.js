@@ -70,8 +70,7 @@ class MyHeaderView extends React.Component {
 
   render() {
     const { dafaultMenu, defaultLanguage } = this.state;
-    const { menuList = [], media, activeMenu } = this.props;
-    console.log('activeMenu :: ', activeMenu);
+    const { menuList = [], media } = this.props;
     return (
       <Row>
         <Col xs={0} lg={2} />

@@ -7,9 +7,10 @@ class Contact extends React.Component {
       <section className="n-section">
         <div className="Home-header">
           <iframe
+            title="GoogleFormsSubmitContact"
             src="https://docs.google.com/forms/d/e/1FAIpQLSeJ4XShhEcAJT_dFY50xqf5snheKD0Z5PorHaG1mlhk2HUt1w/viewform?embedded=true"
             width="640"
-            height="1657"
+            height="1800"
             frameBorder="0"
             marginHeight="0"
             marginWidth="0"

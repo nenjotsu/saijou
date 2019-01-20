@@ -72,7 +72,7 @@ const PhotoGallery = ({ data }) => {
                   <img
                     className="jumbotron-bg"
                     src={srcImg}
-                    alt="Icon of Photo"
+                    alt="Facebook Thumbnail"
                   />
                 </a>
               </Col>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import Input from 'antd/lib/input';
+// import Input from 'antd/lib/input';
 import FacebookGray from '../../../images/facebook-gray.png';
 import YoutubeGray from '../../../images/youtube-gray.png';
 // import TwitterGray from '../../../images/twitter-gray.png';
@@ -66,13 +66,18 @@ const MyFooter = ({
             /> */}
 
             <div className="footer-social">
-              <a href="https://www.facebook.com/saijou.com.ph" target="_blank">
+              <a
+                href="https://www.facebook.com/saijou.com.ph"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={FacebookGray} alt="facebook" />
               </a>
               {/* <img src={Twitter} alt="twitter" /> */}
               <a
                 href="https://www.youtube.com/channel/UCqUmLvhanyzw4x65d736aDA"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src={YoutubeGray} alt="youtube" />
               </a>

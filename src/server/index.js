@@ -6,7 +6,7 @@ import { getBundles } from 'react-loadable/webpack';
 import { setMobileDetect, mobileParser } from 'react-responsive-redux';
 
 import { StaticRouter } from 'react-router-dom';
-import qs from 'qs';
+// import qs from 'qs';
 import compression from 'compression';
 import stats from '../../build/react-loadable.json';
 import configureStore from '../common/store/configureStore';
@@ -77,9 +77,14 @@ server
               <head>
                   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                   <meta charSet='utf-8' />
-                  <title>Saijou International Training Center, Inc.</title>
-                  <meta name="description" content="Japanese Language Training Center in Philippines, learn nihongo at Quezon City"/>
+                  <title>Saijou International Japanese Training Center, Inc.</title>
+                  <meta name="description" content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City"/>
                   <meta name="viewport" content="width=device-width, initial-scale=1">
+                   <meta property="og:url" content="http://www.saijou.com.ph" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Saijou International Japanese Training Center, Inc" />
+  <meta property="og:description"   content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City" />
+  <meta property="og:image"         content="https://raw.githubusercontent.com/nenjotsu/saijou/master/src/common/images/navbar-logo.png?token=AZqv8C2sM3Ck8iVg76Qlocd3t5mXK8u_ks5cTfMfwA%3D%3D" />
                    ${
                      assets.client.css
                        ? `<link rel="stylesheet" type="text/css" href="${
@@ -115,12 +120,22 @@ server
                         ) + 1}/${chunk.file}"></script>`,
                   )
                   .join('\n')}
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132773495-1"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'UA-132773495-1');
+                </script>
+
                 <div id="fb-root"></div>
                 <script>(function(d, s, id) {
                   var js, fjs = d.getElementsByTagName(s)[0];
                   if (d.getElementById(id)) return;
                   js = d.createElement(s); js.id = id;
-                  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+                  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=225330014893176&autoLogAppEvents=1';
                   fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
                 <script>window.main();</script>

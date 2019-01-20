@@ -33,6 +33,7 @@ const FeaturedSensei = ({ data }) => {
               alt="Icon of Course Item"
             /> */}
             <iframe
+              title="YoutubeSensei"
               width="560"
               height="315"
               src="https://www.youtube.com/embed/i6A0TO7iGcg"

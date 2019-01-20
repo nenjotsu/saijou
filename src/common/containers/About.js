@@ -4,7 +4,7 @@ import RSOnLoad from '../transitions/OnLoad';
 class About extends React.Component {
   render() {
     return (
-      <section className="n-section">
+      <section className="n-section text-md">
         <div className="Home-header">
           <RSOnLoad>
             <h1>About</h1>
@@ -41,15 +41,29 @@ class About extends React.Component {
               <li>Career Guidance</li>
             </ul>
 
-            <p>Contact Email: training@saijou-educ.com.ph</p>
+            <hr />
+            <h2>Contact</h2>
+            <h3>Email:</h3>
+            <p>training@saijou-educ.com.ph</p>
 
+            <h3>Address:</h3>
             <p>
-              Address: Units 1402 and 1403 The One Executive Office Building, #5
-              West Avenue, Nayong Kanluran, Quezon City, Second District,
-              Philippines
+              Units 1402 and 1403 The One Executive Office Building, #5 West
+              Avenue, Nayong Kanluran, Quezon City, Second District, Philippines
             </p>
 
             <p>Numbers: (02) 710 8724, +63 9154082502</p>
+
+            <h3>Google Maps</h3>
+            <iframe
+              title="GoogleMaps"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15441.284046064751!2d121.0248415!3d14.6377104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c3c014539e770ba!2sSaijou+International+Training+Center!5e0!3m2!1sen!2sph!4v1548005929446"
+              width="100%"
+              height="450"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen
+            />
             <p>
               Directions{' '}
               <a href="https://goo.gl/maps/dWVow59oK7z" target="_open">

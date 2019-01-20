@@ -6,11 +6,11 @@ import Col from 'antd/lib/col';
 import withMedia from '../../../helpers/WithMediaQueries';
 import PrimaryButton from '../../../components/Button/Primary';
 // import RightArrow from '../../../images/right-arrow.png';
-import JumbotronBg from '../../../images/jumbotron-bg.png';
+// import JumbotronBg from '../../../images/jumbotron-bg.png';
 
 import Facebook from '../../../images/facebook.png';
 import Youtube from '../../../images/youtube.png';
-import Twitter from '../../../images/twitter.png';
+// import Twitter from '../../../images/twitter.png';
 
 const propTypes = {
   media: PropTypes.object,
@@ -45,16 +45,30 @@ const Jumbotron = ({ media, data }) => {
             <br />
             <small className="jumbotron-tagline">{data.tagline}</small>
           </p>
+          <div
+            className="fb-like"
+            data-href="https://www.facebook.com/saijou.com.ph"
+            data-layout="standard"
+            data-action="like"
+            data-size="large"
+            data-show-faces="true"
+            data-share="true"
+          />
         </div>
 
         <div className="footer-social">
-          <a href="https://www.facebook.com/saijou.com.ph" target="_blank">
+          <a
+            href="https://www.facebook.com/saijou.com.ph"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={Facebook} alt="facebook" />
           </a>
           {/* <img src={Twitter} alt="twitter" /> */}
           <a
             href="https://www.youtube.com/channel/UCqUmLvhanyzw4x65d736aDA"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <img src={Youtube} alt="youtube" />
           </a>

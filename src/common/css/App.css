@@ -16,13 +16,17 @@ body {
   /* font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol'; */
-  font-size: 14px;
+  font-size: 16px;
   font-variant: tabular-nums;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
 
-  font-family: 'Domine';
+  /* font-family: 'Domine'; */
+  font-family: 'Chinese Quote', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue',
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
   color: rgb(34, 34, 41);
   line-height: 1.5;
   overflow-x: hidden;
@@ -148,7 +152,7 @@ h1 > small,
 
 .ant-list-vertical .ant-list-item-content {
   display: block;
-  color: rgba(0, 0, 0, 0.65);
+  color: rgba(70, 22, 22, 0.65);
   font-size: 25px;
   margin: 0 0 30px 0;
 }
@@ -236,6 +240,10 @@ h1 > small,
 .n-section-jumbotron {
   min-height: 800px;
   padding: 20px;
+}
+
+.text-md {
+  font-size: 20px;
 }
 
 .bg-white {

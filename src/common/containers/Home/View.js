@@ -12,10 +12,10 @@ const defaultProps = {
   intl: {},
 };
 
-const ComingSoon = Loadable({
-  loader: () => import('./components/ComingSoon'),
-  loading: () => null,
-});
+// const ComingSoon = Loadable({
+//   loader: () => import('./components/ComingSoon'),
+//   loading: () => null,
+// });
 
 const Jumbotron = Loadable({
   loader: () => import('./components/Jumbotron'),
@@ -37,10 +37,10 @@ const FeaturedSensei = Loadable({
   loading: () => null,
 });
 
-const LatestNews = Loadable({
-  loader: () => import('./components/LatestNews'),
-  loading: () => null,
-});
+// const LatestNews = Loadable({
+//   loader: () => import('./components/LatestNews'),
+//   loading: () => null,
+// });
 
 const PhotoGallery = Loadable({
   loader: () => import('./components/PhotoGallery'),

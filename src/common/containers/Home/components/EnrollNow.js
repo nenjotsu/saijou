@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
@@ -9,7 +9,7 @@ const propTypes = {};
 
 const defaultProps = {};
 
-const EnrollNow = ({ data }) => {
+const EnrollNow = () => {
   return (
     <Row type="flex" justify="center" align="top">
       <Col xs={0} md={9} />

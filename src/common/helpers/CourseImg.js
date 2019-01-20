@@ -5,7 +5,6 @@ import BonsaiImg from '../images/course-thumb-bonsai.png';
 import ShrineImg from '../images/course-thumb-shrine.png';
 
 const getCourseImg = badgeTitle => {
-  console.log('badgeTitle', badgeTitle);
   let imgSrc = CoursesItem;
   switch (badgeTitle) {
     case 'N5 Level I':
