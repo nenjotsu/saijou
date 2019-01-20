@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from './Loading';
 
 class Contact extends React.Component {
   render() {
@@ -9,11 +10,11 @@ class Contact extends React.Component {
             src="https://docs.google.com/forms/d/e/1FAIpQLSeJ4XShhEcAJT_dFY50xqf5snheKD0Z5PorHaG1mlhk2HUt1w/viewform?embedded=true"
             width="640"
             height="1657"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
           >
-            Loading...
+            <Loading />
           </iframe>
         </div>
       </section>

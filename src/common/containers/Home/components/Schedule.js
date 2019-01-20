@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import withMedia from '../../../helpers/WithMediaQueries';
 import PrimaryButton from '../../../components/Button/Primary';
-// import ScheduleImg from '../../../images/schedule-img.png';
 import ScheduleImg from '../../../images/schedule-display.png';
 
 const propTypes = {
@@ -16,12 +14,7 @@ const defaultProps = {
   media: {},
 };
 
-const Schedule = ({ media, data }) => {
-  const isTiny = media.tiny;
-  const isBig = media.big;
-  let textClass;
-  textClass = isBig ? 'txt-big' : '';
-  textClass = isTiny ? 'txt-tiny' : '';
+const Schedule = ({ data }) => {
   return (
     <Row>
       <Col xs={0} md={2} />
@@ -86,4 +79,4 @@ const Schedule = ({ media, data }) => {
 Schedule.propTypes = propTypes;
 Schedule.defaultProps = defaultProps;
 
-export default withMedia(Schedule);
+export default Schedule;

@@ -1,6 +1,7 @@
 const enLang = {
   locale: 'en-US',
   messages: {
+    activeMenu: 'home',
     menuList: [
       {
         title: 'Home',
@@ -10,18 +11,18 @@ const enLang = {
         title: 'Courses',
         to: '/courses',
       },
-      {
-        title: 'Schedule',
-        to: '/schedule',
-      },
+      // {
+      //   title: 'Schedule',
+      //   to: '/schedule',
+      // },
       {
         title: 'About',
         to: '/about',
       },
-      {
-        title: 'News',
-        to: '/news',
-      },
+      // {
+      //   title: 'News',
+      //   to: '/news',
+      // },
       {
         title: 'Contact',
         to: '/contact',
@@ -101,6 +102,8 @@ const enLang = {
         tag: 'Tesda Accredited',
         hours: '320 hours',
         link: '',
+        content:
+          'This course suits students who wish to develop the basics of Japanese Language, such as Katakana, Hiragana & list of Kanji in preparation of JLPT N5. You will able to learn about 100 kanji and about 800 vocabulary words. This is also is part of japanese language & culture courses',
       },
       {
         title: 'JLPT N4 - Level II',
@@ -109,6 +112,8 @@ const enLang = {
         tag: 'Tesda Accredited',
         hours: '300 hours',
         link: '',
+        content: `This course suits students who wish to develop the basics of Japanese Language, such as Katakana, Hiragana & list of Kanji in preparation of JLPT N4.
+          You will able to learn about 300 kanji and about 1,500 vocabulary words. This is also is part of japanese language & culture courses`,
       },
       {
         title: 'Business Nihongo I',
@@ -117,6 +122,8 @@ const enLang = {
         tag: 'Certificate Courses',
         hours: '24 hours',
         link: '',
+        content:
+          'This course suits students who wish to learn the Japanese Language work ethics & culture. This course contains intensive program for business nihongo I',
       },
       {
         title: 'Business Nihongo II',
@@ -124,9 +131,11 @@ const enLang = {
         badgeTitle: 'Nihongo II',
         tag: 'Certificate Courses',
         hours: '24 hours',
-        link: '',
+        content:
+          'This course suits students who wish to learn the Japanese Language work ethics & culture. This course contains intensive program for business nihongo II',
       },
     ],
+    photoGallery: ['1', '2', '3', '4'],
     schedules: [
       {
         title: 'Morning Class',

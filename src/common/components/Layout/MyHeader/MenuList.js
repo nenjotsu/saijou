@@ -1,26 +1,26 @@
 export default [
   {
     title: 'Home',
-    to: '/'
+    to: '/',
   },
   {
     title: 'Courses',
-    to: '/courses'
+    to: '/courses',
   },
-  {
-    title: 'Schedule',
-    to: '/schedule'
-  },
+  // {
+  //   title: 'Schedule',
+  //   to: '/schedule'
+  // },
   {
     title: 'About',
-    to: '/about'
+    to: '/about',
   },
-  {
-    title: 'News',
-    to: '/news'
-  },
+  // {
+  //   title: 'News',
+  //   to: '/news'
+  // },
   {
     title: 'Contact',
-    to: '/contact'
-  }
+    to: '/contact',
+  },
 ];

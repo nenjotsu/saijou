@@ -6,7 +6,7 @@ class News extends React.Component {
       <section className="n-section">
         <div className="Home-header">
           <div
-            class="fb-page"
+            className="fb-page"
             data-href="https://www.facebook.com/saijou.com.ph/"
             data-tabs="timeline"
             data-small-header="false"
@@ -16,7 +16,7 @@ class News extends React.Component {
           >
             <blockquote
               cite="https://www.facebook.com/saijou.com.ph/"
-              class="fb-xfbml-parse-ignore"
+              className="fb-xfbml-parse-ignore"
             >
               <a href="https://www.facebook.com/saijou.com.ph/">
                 Saijou International Training Center, Inc.

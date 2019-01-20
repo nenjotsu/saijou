@@ -1,30 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import withMedia from '../../../helpers/WithMediaQueries';
-import ScheduleImg from '../../../images/schedule-img.png';
 
-const propTypes = {
-  media: PropTypes.object,
-};
+const propTypes = {};
 
-const defaultProps = {
-  media: {},
-};
+const defaultProps = {};
 
-const FeaturedSensei = ({ media, data }) => {
-  const isTiny = media.tiny;
-  const isBig = media.big;
-  let textClass;
-  textClass = isBig ? 'txt-big' : '';
-  textClass = isTiny ? 'txt-tiny' : '';
+const FeaturedSensei = ({ data }) => {
   return (
     <Row>
       <Col xs={0} md={2} />
       <Col xs={24} md={20}>
         <Row gutter={8} type="flex" justify="space-around" align="middle">
-          <Col xs={24} md={10}>
+          <Col xs={24} md={12}>
             <h1>
               Featured <span className="txt-violet-001">Sensei</span>
               <small>Meet the sensei</small>
@@ -37,7 +26,7 @@ const FeaturedSensei = ({ media, data }) => {
               {data.seeMore}
             </a> */}
           </Col>
-          <Col xs={24} md={14}>
+          <Col xs={24} md={12}>
             {/* <img
               className="jumbotron-bg"
               src={ScheduleImg}
@@ -47,9 +36,9 @@ const FeaturedSensei = ({ media, data }) => {
               width="560"
               height="315"
               src="https://www.youtube.com/embed/i6A0TO7iGcg"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             />
           </Col>
         </Row>
@@ -62,4 +51,4 @@ const FeaturedSensei = ({ media, data }) => {
 FeaturedSensei.propTypes = propTypes;
 FeaturedSensei.defaultProps = defaultProps;
 
-export default withMedia(FeaturedSensei);
+export default FeaturedSensei;

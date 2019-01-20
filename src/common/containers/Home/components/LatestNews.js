@@ -2,25 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import withMedia from '../../../helpers/WithMediaQueries';
 import LatestNewsImg from '../../../images/latest-news.png';
 import IconShare from '../../../images/icon-share.png';
 import IconRightArrow from '../../../images/icon-right-arrow.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
 };
 
-const LatestNews = ({ media, data }) => {
-  const isTiny = media.tiny;
-  const isBig = media.big;
-  let textClass;
-  textClass = isBig ? 'txt-big' : '';
-  textClass = isTiny ? 'txt-tiny' : '';
+const LatestNews = ({ data }) => {
   return (
     <Row>
       <Col xs={0} md={2} />
@@ -73,4 +67,4 @@ const LatestNews = ({ media, data }) => {
 LatestNews.propTypes = propTypes;
 LatestNews.defaultProps = defaultProps;
 
-export default withMedia(LatestNews);
+export default LatestNews;

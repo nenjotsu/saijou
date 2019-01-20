@@ -13,18 +13,22 @@ const RadioGroup = Radio.Group;
 
 const propTypes = {
   media: PropTypes.object,
-  menuList: PropTypes.array
+  location: PropTypes.object,
+  menuList: PropTypes.array,
+  activeMenu: PropTypes.string,
 };
 
 const defaultProps = {
   media: {},
-  menuList: []
+  location: {},
+  menuList: [],
+  activeMenu: 'home',
 };
 
 const contextTypes = {
   router: PropTypes.shape({
-    history: PropTypes.object.isRequired
-  })
+    history: PropTypes.object.isRequired,
+  }),
 };
 
 class MyHeaderView extends React.Component {
@@ -33,13 +37,24 @@ class MyHeaderView extends React.Component {
     const menu = props.location.pathname.replace('/', '');
     this.state = {
       dafaultMenu: menu || 'home',
-      defaultLanguage: props.intl.locale || 'en-US'
+      defaultLanguage: props.intl.locale || 'en-US',
     };
   }
 
-  componentDidMount = () => {};
+  // UNSAFE_componentWillMount(nextProps) {}
 
-  componentWillUnmount() {}
+  // componentDidMount() {}
+
+  // UNSAFE_componentWillReceiveProps(nextProps) {
+  //   console.log('UNSAFE_componentWillReceiveProps nextProps', nextProps);
+  // }
+
+  // componentDidUpdate(nextProps, nextState) {
+  //   console.log('componentDidUpdate nextProps', nextProps);
+  //   console.log('componentDidUpdate nextState', nextState);
+  // }
+
+  // componentWillUnmount() {}
 
   switchLocale = e => {
     const lang = e.target.value;
@@ -49,13 +64,14 @@ class MyHeaderView extends React.Component {
 
   handleClick = e => {
     this.setState({
-      dafaultMenu: e.key
+      dafaultMenu: e.key,
     });
   };
+
   render() {
     const { dafaultMenu, defaultLanguage } = this.state;
-    const { menuList = [], media } = this.props;
-    console.log('media :: ', media);
+    const { menuList = [], media, activeMenu } = this.props;
+    console.log('activeMenu :: ', activeMenu);
     return (
       <Row>
         <Col xs={0} lg={2} />
@@ -78,7 +94,7 @@ class MyHeaderView extends React.Component {
               onChange={this.switchLocale}
             >
               <RadioButton value="en-US">EN</RadioButton>
-              <RadioButton value="ja">JP</RadioButton>
+              {/* <RadioButton value="ja">JP</RadioButton> */}
             </RadioGroup>
           </div>
 

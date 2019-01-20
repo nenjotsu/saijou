@@ -1,29 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import withMedia from '../../../helpers/WithMediaQueries';
 import PrimaryButton from '../../../components/Button/Primary';
 
-const propTypes = {
-  media: PropTypes.object
-};
+const propTypes = {};
 
-const defaultProps = {
-  media: {}
-};
+const defaultProps = {};
 
-const EnrollNow = ({ media, data }) => {
-  const isTiny = media.tiny;
-  const isBig = media.big;
-  let textClass;
-  textClass = isBig ? 'txt-big' : '';
-  textClass = isTiny ? 'txt-tiny' : '';
+const EnrollNow = ({ data }) => {
   return (
     <Row type="flex" justify="center" align="top">
       <Col xs={0} md={9} />
       <Col xs={24} md={6}>
-        <PrimaryButton label={'Enroll Now'} />
+        <Link to="/contact">
+          <PrimaryButton label={'Enroll Now'} />
+        </Link>
       </Col>
       <Col xs={0} md={9} />
     </Row>
@@ -33,4 +26,4 @@ const EnrollNow = ({ media, data }) => {
 EnrollNow.propTypes = propTypes;
 EnrollNow.defaultProps = defaultProps;
 
-export default withMedia(EnrollNow);
+export default EnrollNow;

@@ -8,10 +8,25 @@ export default handleActions(
       return {
         ...state,
         default: {
-          ...state[`intl_${action.payload}`]
-        }
+          ...state[`intl_${action.payload}`],
+        },
       };
-    }
+    },
+    [ACTION.setActiveMenu]: (state, action) => {
+      console.log(action.payload);
+      const result = {
+        ...state,
+        default: {
+          ...state.default,
+          messages: {
+            ...state.default.messages,
+            activeMenu: action.payload,
+          },
+        },
+      };
+      debugger;
+      return result;
+    },
   },
-  model
+  model,
 );

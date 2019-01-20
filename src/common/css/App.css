@@ -5,6 +5,9 @@
 @import '~antd/es/button/style/index.css';
 @import '~antd/es/input/style/index.css';
 @import '~antd/es/menu/style/index.css';
+@import '~antd/es/list/style/index.css';
+@import '~antd/es/avatar/style/index.css';
+@import '~antd/es/icon/style/index.css';
 
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Domine|Inconsolata');
 
@@ -112,6 +115,10 @@ h1 > small,
 
 /** courses */
 
+.no-underline {
+  text-decoration: none;
+}
+
 .wrapper-course {
   transition: auto 0.5s;
   cursor: pointer;
@@ -123,14 +130,27 @@ h1 > small,
   left: 6px;
 }
 .course-badgetitle {
-  font-size: 12px;
+  font-size: 18px;
   font-family: 'Cabin';
   color: rgb(255, 255, 255);
-  font-weight: bold;
   text-transform: uppercase;
   background-color: black;
   padding: 10px;
   display: inline-block;
+}
+
+.ant-list-vertical .ant-list-item-meta-title {
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.ant-list-vertical .ant-list-item-content {
+  display: block;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 25px;
+  margin: 0 0 30px 0;
 }
 
 .ant-layout {

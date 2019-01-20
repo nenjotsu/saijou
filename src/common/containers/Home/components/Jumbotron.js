@@ -37,12 +37,14 @@ const Jumbotron = ({ media, data }) => {
             Saijou International Training Center
             <br />
             <small>最上国際研修センター</small>
-            <br />
-            <small className="jumbotron-tagline">{data.tagline}</small>
           </p>
           <Link to="/contact">
             <PrimaryButton label={data.enrollLabel} type="full" />
           </Link>
+          <p className={`jumbotron-text ${textClass}`}>
+            <br />
+            <small className="jumbotron-tagline">{data.tagline}</small>
+          </p>
         </div>
 
         <div className="footer-social">

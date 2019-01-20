@@ -58,7 +58,7 @@ const Partners = Loadable({
 
 class Home extends Component {
   render() {
-    const { intl } = this.props;
+    const { intl, reduxAction } = this.props;
     return (
       <main>
         {/* <section className="n-section bg-white">
@@ -73,7 +73,7 @@ class Home extends Component {
         </section>
         <section className="n-section bg-white">
           <RSOnLoad>
-            <Courses data={intl.messages.courses} />
+            <Courses data={intl.messages.courses} reduxAction={reduxAction} />
           </RSOnLoad>
         </section>
         <section className="n-section bg-gray-001">
@@ -87,14 +87,14 @@ class Home extends Component {
           </RSOnLoad>
         </section>
 
-        <section className="n-section bg-maroon">
+        {/* <section className="n-section bg-maroon">
           <RSOnLoad>
             <LatestNews data={intl.messages.schedules} />
           </RSOnLoad>
-        </section>
+        </section> */}
         <section className="n-section bg-white">
           <RSOnLoad>
-            <PhotoGallery data={intl.messages.courses} />
+            <PhotoGallery data={intl.messages.photoGallery} />
           </RSOnLoad>
         </section>
         <section className="n-section-sm bg-gray-001">

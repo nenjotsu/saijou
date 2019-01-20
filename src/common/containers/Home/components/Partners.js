@@ -2,25 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
-import withMedia from '../../../helpers/WithMediaQueries';
-import PrimaryButton from '../../../components/Button/Primary';
 import PartnerTesda from '../../../images/partners-tesda.png';
 import PartnerJobsConnect from '../../../images/partners-jobsconnect.png';
 
 const propTypes = {
-  media: PropTypes.object
+  media: PropTypes.object,
 };
 
 const defaultProps = {
-  media: {}
+  media: {},
 };
 
-const Partners = ({ media, data }) => {
-  const isTiny = media.tiny;
-  const isBig = media.big;
-  let textClass;
-  textClass = isBig ? 'txt-big' : '';
-  textClass = isTiny ? 'txt-tiny' : '';
+const Partners = ({ data }) => {
   return (
     <Row>
       <Col xs={0} md={2} />
@@ -51,4 +44,4 @@ const Partners = ({ media, data }) => {
 Partners.propTypes = propTypes;
 Partners.defaultProps = defaultProps;
 
-export default withMedia(Partners);
+export default Partners;

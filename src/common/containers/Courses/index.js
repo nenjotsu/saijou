@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Home from './View';
+import Courses from './View';
 import * as intl from '../../actions/intl';
 import * as ui from '../../actions/ui';
 
@@ -18,4 +18,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Home);
+)(Courses);
