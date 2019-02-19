@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import PrimaryButton from '../../../components/Button/Primary';
@@ -21,11 +22,13 @@ const Schedule = ({ data }) => {
       <Col xs={24} md={20}>
         <Row gutter={8} type="flex" justify="space-around" align="top">
           <Col xs={24} md={14}>
-            <img
-              className="jumbotron-bg"
-              src={ScheduleImg}
-              alt="Icon of Course Item"
-            />
+            <LazyLoad debounce={false} offsetVertical={500}>
+              <img
+                className="jumbotron-bg"
+                src={ScheduleImg}
+                alt="Icon of Course Item"
+              />
+            </LazyLoad>
           </Col>
           <Col xs={24} md={10}>
             <h1>
@@ -33,8 +36,8 @@ const Schedule = ({ data }) => {
               <small>Choose from our various schedules</small>
             </h1>
             <p>
-              Students may choose from our on-going class schedules, for more
-              detailed information you can visit our calendar.
+              Students may choose from our on-going class schedules, for
+              more detailed information you can visit our calendar.
               <br />
               Or you can drop us a call:
             </p>

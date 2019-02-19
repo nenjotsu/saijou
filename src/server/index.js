@@ -85,6 +85,7 @@ server
   <meta property="og:title"         content="Saijou International Japanese Training Center, Inc" />
   <meta property="og:description"   content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City" />
   <meta property="og:image"         content="https://raw.githubusercontent.com/nenjotsu/saijou/master/src/common/images/navbar-logo.png?token=AZqv8C2sM3Ck8iVg76Qlocd3t5mXK8u_ks5cTfMfwA%3D%3D" />
+  <meta name="google-site-verification" content="gWNCdL2WUbjn_CWAqp-Uherr21AkQSSmUaiNI_Iv4T4" />
                    ${
                      assets.client.css
                        ? `<link rel="stylesheet" type="text/css" href="${
@@ -108,16 +109,19 @@ server
                 ${
                   process.env.NODE_ENV === 'production'
                     ? `<script src="${assets.client.js}"></script>`
-                    : `<script src="${assets.client.js}" crossorigin></script>`
+                    : `<script src="${
+                        assets.client.js
+                      }" crossorigin></script>`
                 }
                 ${chunks
                   .map(chunk =>
                     process.env.NODE_ENV === 'production'
                       ? `<script src="/${chunk.file}"></script>`
-                      : `<script src="http://${process.env.HOST}:${parseInt(
-                          process.env.PORT,
-                          10,
-                        ) + 1}/${chunk.file}"></script>`,
+                      : `<script src="http://${
+                          process.env.HOST
+                        }:${parseInt(process.env.PORT, 10) + 1}/${
+                          chunk.file
+                        }"></script>`,
                   )
                   .join('\n')}
                 <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazy-load';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import PartnerTesda from '../../../images/partners-tesda.png';
@@ -26,12 +27,16 @@ const Partners = ({ data }) => {
         <Row gutter={8} type="flex" justify="space-around" align="middle">
           <Col xs={24} md={12}>
             <div className="wrapper-course text-center">
-              <img src={PartnerTesda} alt="Icon of Course Item" />
+              <LazyLoad debounce={false} offsetVertical={500}>
+                <img src={PartnerTesda} alt="Icon of Course Item" />
+              </LazyLoad>
             </div>
           </Col>
           <Col xs={24} md={12}>
             <div className="wrapper-course text-center">
-              <img src={PartnerJobsConnect} alt="Icon of Course Item" />
+              <LazyLoad debounce={false} offsetVertical={500}>
+                <img src={PartnerJobsConnect} alt="Icon of Course Item" />
+              </LazyLoad>
             </div>
           </Col>
         </Row>

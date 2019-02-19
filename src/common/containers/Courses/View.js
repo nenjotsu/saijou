@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazy-load';
 import RSOnLoad from '../../transitions/OnLoad';
 import getCourseImg from '../../helpers/CourseImg';
 
@@ -43,11 +44,13 @@ class Courses extends Component {
                     <IconText type="safety-certificate" text={item.tag} />,
                   ]}
                   extra={
-                    <img
-                      // width={300}
-                      alt="logo"
-                      src={getCourseImg(item.badgeTitle)}
-                    />
+                    <LazyLoad debounce={false} offsetVertical={500}>
+                      <img
+                        // width={300}
+                        alt="logo"
+                        src={getCourseImg(item.badgeTitle)}
+                      />
+                    </LazyLoad>
                   }
                 >
                   <List.Item.Meta

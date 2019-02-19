@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import getCourseImg from '../../../helpers/CourseImg';
@@ -48,14 +49,18 @@ const Courses = ({ data, reduxAction, location }) => {
               <Col key={course.title} xs={24} sm={12} md={6}>
                 <div className="wrapper-course">
                   <div className="wrapper-course-badgetitle">
-                    <p className="course-badgetitle">{course.badgeTitle}</p>
+                    <p className="course-badgetitle">
+                      {course.badgeTitle}
+                    </p>
                   </div>
                   <Link to="/courses" className="no-underline">
-                    <img
-                      className="jumbotron-bg"
-                      src={getCourseImg(course.badgeTitle)}
-                      alt="Icon of Course Item"
-                    />
+                    <LazyLoad debounce={false} offsetVertical={500}>
+                      <img
+                        className="jumbotron-bg"
+                        src={getCourseImg(course.badgeTitle)}
+                        alt="Icon of Course Item"
+                      />
+                    </LazyLoad>
                   </Link>
                 </div>
                 <p className="course-tag">{course.tag}</p>

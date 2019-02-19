@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazy-load';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
 import fb1Img from '../../../images/fb1.jpg';
@@ -24,8 +25,13 @@ const PhotoGallery = ({ data }) => {
           <Col xs={24}>
             <p className="quote text-center">"Language CONNECTS People"</p>
             <p className="text-center">
-              <a href="https://www.facebook.com/saijou.com.ph" target="_open">
-                <img className="icon-4x" src={Facebook} alt="Facebook" />
+              <a
+                href="https://www.facebook.com/saijou.com.ph"
+                target="_open"
+              >
+                <LazyLoad debounce={false} offsetVertical={500}>
+                  <img className="icon-4x" src={Facebook} alt="Facebook" />
+                </LazyLoad>
               </a>
               <br />
               <a
@@ -69,11 +75,13 @@ const PhotoGallery = ({ data }) => {
                   className="no-underline"
                   target="_open"
                 >
-                  <img
-                    className="jumbotron-bg"
-                    src={srcImg}
-                    alt="Facebook Thumbnail"
-                  />
+                  <LazyLoad debounce={false} offsetVertical={500}>
+                    <img
+                      className="jumbotron-bg"
+                      src={srcImg}
+                      alt="Facebook Thumbnail"
+                    />
+                  </LazyLoad>
                 </a>
               </Col>
             );
