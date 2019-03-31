@@ -13,7 +13,7 @@ const FeaturedSensei = ({ data }) => {
       <Col xs={0} md={2} />
       <Col xs={24} md={20}>
         <Row gutter={8} type="flex" justify="space-around" align="middle">
-          <Col xs={24} md={12}>
+          <Col xs={24} md={10}>
             <h1>
               Featured <span className="txt-violet-001">Sensei</span>
               <small>Meet the sensei</small>
@@ -26,7 +26,7 @@ const FeaturedSensei = ({ data }) => {
               {data.seeMore}
             </a> */}
           </Col>
-          <Col xs={24} md={12}>
+          <Col xs={24} md={14}>
             {/* <img
               className="jumbotron-bg"
               src={ScheduleImg}
@@ -34,7 +34,7 @@ const FeaturedSensei = ({ data }) => {
             /> */}
             <iframe
               title="YoutubeSensei"
-              width="560"
+              width="100%"
               height="315"
               src="https://www.youtube.com/embed/i6A0TO7iGcg"
               frameBorder="0"

@@ -60,6 +60,7 @@ h1 > small,
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .course-tag-icon > img {
   margin-bottom: -4px;
   margin-left: 7px;
@@ -79,19 +80,20 @@ h1 > small,
 }
 
 .course-title {
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Abril Fatface';
   color: rgb(34, 34, 41);
   text-transform: uppercase;
   cursor: pointer;
   margin-bottom: 0px;
 }
+
 .course-title:hover {
   color: rgb(237, 33, 34);
 }
 
 .course-subtitle {
-  font-size: 12px;
+  font-size: 0.7em;
   font-family: 'Cabin';
   color: rgb(64, 177, 73);
   font-weight: bold;
@@ -113,6 +115,7 @@ h1 > small,
   font-weight: bold;
   text-decoration: none;
 }
+
 .see-more:hover {
   border-bottom: 2px solid red;
 }
@@ -133,13 +136,14 @@ h1 > small,
   top: 40px;
   left: 6px;
 }
+
 .course-badgetitle {
-  font-size: 18px;
+  font-size: 0.8em;
   font-family: 'Cabin';
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   background-color: black;
-  padding: 10px;
+  padding: 4px 10px;
   display: inline-block;
 }
 
@@ -152,8 +156,8 @@ h1 > small,
 
 .ant-list-vertical .ant-list-item-content {
   display: block;
-  color: rgba(70, 22, 22, 0.65);
-  font-size: 25px;
+  color: #7b7b7d;
+  font-size: 1.4em;
   margin: 0 0 30px 0;
 }
 
@@ -218,6 +222,7 @@ h1 > small,
   border-bottom: 2px solid #ff0000;
   color: #ff0000;
 }
+
 /* 
 .ant-radio-button-wrapper-checked {
   color: #ff0000;
@@ -233,10 +238,12 @@ h1 > small,
   min-height: 600px;
   padding: 60px;
 }
+
 .n-section-sm {
   min-height: 200px;
   padding: 50px;
 }
+
 .n-section-jumbotron {
   min-height: 800px;
   padding: 20px;
@@ -258,6 +265,7 @@ h1 > small,
   background-color: #270b0b;
   color: #d6dcdd;
 }
+
 .bg-dark-maroon {
   background-color: #190d0d;
   color: #d6dcdd;
@@ -407,11 +415,13 @@ h1 > small,
 .jumbotron-left {
   min-height: 400px;
 }
+
 .jumbotron-bg {
   width: 100%;
   padding: 10px;
   z-index: -1;
 }
+
 .wrapper-course:hover {
   background-color: #ff00000f;
 }
@@ -419,31 +429,43 @@ h1 > small,
 .cover-bg {
   background-image: url(../../common/images/cover.jpg);
   width: 100%;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+}
+
+.courses-bg {
+  background-image: url(../../common/images/courses-bg.jpg);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
 }
 
 /** Text */
 .jumbotron-tagline {
   font-size: 0.5em;
 }
+
 .jumbotron-text {
   color: #ebeff0;
   text-shadow: -8px 10px 37px rgba(0, 0, 0, 0.34);
-  font-size: 3em;
+  font-size: 2em;
   font-family: 'Abril Fatface', cursive;
   transition: all 0.2s;
 }
+
 .jumbotron-text > small {
   font-family: 'Hiragino Sans GB';
   transition: all 0.2s;
 }
+
 .txt-tiny {
   font-size: 3em;
   font-family: 'Abril Fatface', cursive;
   transition: all 0.2s;
 }
+
 .txt-big {
   font-size: 5em;
   font-family: 'Abril Fatface', cursive;
@@ -476,6 +498,7 @@ h1 > small,
 .footer-list {
   list-style: none;
 }
+
 .footer-list > li {
   margin-left: -40px;
   margin-bottom: 15px;
@@ -484,10 +507,12 @@ h1 > small,
   color: rgb(195, 203, 204);
   line-height: 1;
 }
+
 .footer-list > li:hover {
   color: #ed2123;
   cursor: pointer;
 }
+
 .footer-social {
   margin-top: 30px;
 }
@@ -500,6 +525,7 @@ h1 > small,
   border-radius: 33%;
   padding: 5px;
 }
+
 .footer-social > a > img:hover {
   border: 1px solid #f74f4f;
   padding: 4px;
