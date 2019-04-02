@@ -19,13 +19,6 @@ const defaultProps = {
 };
 
 const Courses = ({ data, reduxAction, location }) => {
-  // function redirectToCourses(e) {
-  //   e.preventDefault();
-  //   reduxAction.setActiveMenu('courses');
-  //   // location.push('/courses');
-  //   window.location = '/courses';
-  //   debugger;
-  // }
   return (
     <Row>
       <Col xs={0} md={2} />

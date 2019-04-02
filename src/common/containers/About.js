@@ -6,7 +6,7 @@ import Col from 'antd/lib/col';
 class About extends React.Component {
   render() {
     return (
-      <section className="n-section text-md">
+      <section className="n-section about-bg text-md">
         <div className="Home-header">
           <Row>
             <Col xs={0} md={2} />

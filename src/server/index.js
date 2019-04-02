@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Capture } from 'react-loadable';
+import { match } from 'react-router';
 import { getBundles } from 'react-loadable/webpack';
 import { setMobileDetect, mobileParser } from 'react-responsive-redux';
 
@@ -24,55 +25,38 @@ server
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get('/*', (req, res) => {
-    const { match } = require('react-router');
-    match(
-      { routes: Routes(), location: req.url },
-      (error, redirectLocation, renderProps) => {
-        if (error) {
-          res.status(500).send(error.message);
-        } else if (redirectLocation) {
-          res.redirect(
-            302,
-            redirectLocation.pathname + redirectLocation.search,
-          );
-        } else if (renderProps) {
-          // const preloadedState = qs.parse(req.query);
-          const context = {};
-          const modules = [];
+    const context = {};
+    const modules = [];
 
-          const preloadedState = loadStateFromSessionStorage();
+    const preloadedState = loadStateFromSessionStorage();
 
-          const store = configureStore(preloadedState);
-          const { dispatch } = store;
-          const mobileDetect = mobileParser(req);
-          dispatch(setMobileDetect(mobileDetect));
-          const markup = renderToString(
-            <Provider store={store}>
-              <Capture report={moduleName => modules.push(moduleName)}>
-                <StaticRouter context={context} location={req.url}>
-                  <Routes />
-                </StaticRouter>
-              </Capture>
-            </Provider>,
-          );
+    const store = configureStore(preloadedState);
+    const { dispatch } = store;
+    const mobileDetect = mobileParser(req);
+    dispatch(setMobileDetect(mobileDetect));
+    const markup = renderToString(
+      <Provider store={store}>
+        <Capture report={moduleName => modules.push(moduleName)}>
+          <StaticRouter context={context} location={req.url}>
+            <Routes />
+          </StaticRouter>
+        </Capture>
+      </Provider>,
+    );
 
-          const finalState = {
-            ...store.getState(),
-            ...preloadedState,
-          };
+    const finalState = {
+      ...store.getState(),
+      ...preloadedState,
+    };
 
-          if (context.url) {
-            res.redirect(context.url);
-          } else {
-            const bundles = getBundles(stats, modules);
-            const chunks = bundles.filter(bundle =>
-              bundle.file.endsWith('.js'),
-            );
-            const styles = bundles.filter(bundle =>
-              bundle.file.endsWith('.css'),
-            );
+    if (context.url) {
+      res.redirect(context.url);
+    } else {
+      const bundles = getBundles(stats, modules);
+      const chunks = bundles.filter(bundle => bundle.file.endsWith('.js'));
+      const styles = bundles.filter(bundle => bundle.file.endsWith('.css'));
 
-            res.send(`<!doctype html>
+      res.send(`<!doctype html>
               <html lang="en">
               <head>
                   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,12 +64,12 @@ server
                   <title>Saijou International Japanese Training Center, Inc.</title>
                   <meta name="description" content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City"/>
                   <meta name="viewport" content="width=device-width, initial-scale=1">
-                   <meta property="og:url" content="http://www.saijou.com.ph" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Saijou International Japanese Training Center, Inc" />
-  <meta property="og:description"   content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City" />
-  <meta property="og:image"         content="https://raw.githubusercontent.com/nenjotsu/saijou/master/src/common/images/navbar-logo.png?token=AZqv8C2sM3Ck8iVg76Qlocd3t5mXK8u_ks5cTfMfwA%3D%3D" />
-  <meta name="google-site-verification" content="gWNCdL2WUbjn_CWAqp-Uherr21AkQSSmUaiNI_Iv4T4" />
+                  <meta property="og:url" content="http://www.saijou.com.ph" />
+                  <meta property="og:type"          content="website" />
+                  <meta property="og:title"         content="Saijou International Japanese Training Center, Inc" />
+                  <meta property="og:description"   content="Japanese Language Training Center in the Philippines, Learn nihongo at Quezon City" />
+                  <meta property="og:image"         content="https://raw.githubusercontent.com/nenjotsu/saijou/master/src/common/images/navbar-logo.png?token=AZqv8C2sM3Ck8iVg76Qlocd3t5mXK8u_ks5cTfMfwA%3D%3D" />
+                  <meta name="google-site-verification" content="gWNCdL2WUbjn_CWAqp-Uherr21AkQSSmUaiNI_Iv4T4" />
                    ${
                      assets.client.css
                        ? `<link rel="stylesheet" type="text/css" href="${
@@ -142,12 +126,7 @@ server
                 <script>window.main();</script>
               </body>
           </html>`);
-          }
-        } else {
-          res.redirect('/404');
-        }
-      },
-    );
+    }
   });
 
 export default server;

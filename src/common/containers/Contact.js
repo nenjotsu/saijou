@@ -4,7 +4,7 @@ import Loading from './Loading';
 class Contact extends React.Component {
   render() {
     return (
-      <section className="n-section">
+      <section className="n-section contact-bg">
         <div className="Home-header">
           <iframe
             title="GoogleFormsSubmitContact"

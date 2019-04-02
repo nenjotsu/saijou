@@ -431,7 +431,7 @@ h1 > small,
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 .courses-bg {
@@ -439,7 +439,21 @@ h1 > small,
   width: 100%;
   background-position: top;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: 100%;
+}
+.about-bg {
+  background-image: url(../../common/images/about-bg.jpg);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+.contact-bg {
+  background-image: url(../../common/images/contact-bg.jpg);
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 /** Text */

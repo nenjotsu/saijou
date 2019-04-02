@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Radio from 'antd/lib/radio';
 import Row from 'antd/lib/row';
 import Col from 'antd/lib/col';
@@ -34,27 +34,13 @@ const contextTypes = {
 class MyHeaderView extends React.Component {
   constructor(props) {
     super(props);
-    // const menu = props.location.pathname.replace('/', '');
+    const menu = props.location.pathname.replace('/', '');
+    console.log('menu', menu);
     this.state = {
-      dafaultMenu: 'home',
+      dafaultMenu: menu || 'home',
       defaultLanguage: props.intl.locale || 'en-US',
     };
   }
-
-  // UNSAFE_componentWillMount(nextProps) {}
-
-  // componentDidMount() {}
-
-  // UNSAFE_componentWillReceiveProps(nextProps) {
-  //   console.log('UNSAFE_componentWillReceiveProps nextProps', nextProps);
-  // }
-
-  // componentDidUpdate(nextProps, nextState) {
-  //   console.log('componentDidUpdate nextProps', nextProps);
-  //   console.log('componentDidUpdate nextState', nextState);
-  // }
-
-  // componentWillUnmount() {}
 
   switchLocale = e => {
     const lang = e.target.value;
@@ -127,4 +113,4 @@ MyHeaderView.propTypes = propTypes;
 MyHeaderView.defaultProps = defaultProps;
 MyHeaderView.contextTypes = contextTypes;
 
-export default MyHeaderView;
+export default withRouter(MyHeaderView);

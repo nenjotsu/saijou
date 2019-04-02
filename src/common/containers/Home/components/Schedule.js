@@ -36,8 +36,8 @@ const Schedule = ({ data }) => {
               <small>Choose from our various schedules</small>
             </h1>
             <p>
-              Students may choose from our on-going class schedules, for
-              more detailed information you can visit our calendar.
+              Students may choose from our on-going class schedules, for more
+              detailed information you can visit our calendar.
               <br />
               Or you can drop us a call:
             </p>
@@ -46,7 +46,7 @@ const Schedule = ({ data }) => {
               <PrimaryButton label={'Contact Us'} />
             </Link>
             <p className="contact-number">
-              (02) 710 8710
+              (63) 915 4082502
               <br />
               (02) 710 8724
             </p>

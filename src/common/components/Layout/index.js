@@ -1,17 +1,19 @@
 import React from 'react';
 import Layout from 'antd/lib/layout';
 import Loadable from 'react-loadable';
+// import MyHeader from './MyHeader';
+// import MyFooter from './MyFooter';
 
 const { Content, Header, Footer } = Layout;
 
 const MyHeader = Loadable({
   loader: () => import('./MyHeader'),
-  loading: () => null
+  loading: () => null,
 });
 
 const MyFooter = Loadable({
   loader: () => import('./MyFooter'),
-  loading: () => null
+  loading: () => null,
 });
 
 const ContentLayout = props => (
