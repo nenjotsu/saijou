@@ -529,3 +529,5 @@ h1 > small,
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: #ed2123;
 }
+
+@import './Share.css';

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { match } from 'react-router';
 import { Capture } from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
 import { setMobileDetect, mobileParser } from 'react-responsive-redux';
@@ -25,6 +24,7 @@ server
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get('/*', (req, res) => {
+    const { match } = require('react-router');
     match(
       { routes: Routes(), location: req.url },
       (error, redirectLocation, renderProps) => {
@@ -109,19 +109,16 @@ server
                 ${
                   process.env.NODE_ENV === 'production'
                     ? `<script src="${assets.client.js}"></script>`
-                    : `<script src="${
-                        assets.client.js
-                      }" crossorigin></script>`
+                    : `<script src="${assets.client.js}" crossorigin></script>`
                 }
                 ${chunks
                   .map(chunk =>
                     process.env.NODE_ENV === 'production'
                       ? `<script src="/${chunk.file}"></script>`
-                      : `<script src="http://${
-                          process.env.HOST
-                        }:${parseInt(process.env.PORT, 10) + 1}/${
-                          chunk.file
-                        }"></script>`,
+                      : `<script src="http://${process.env.HOST}:${parseInt(
+                          process.env.PORT,
+                          10,
+                        ) + 1}/${chunk.file}"></script>`,
                   )
                   .join('\n')}
                 <!-- Global site tag (gtag.js) - Google Analytics -->

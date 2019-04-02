@@ -1,3 +1,13 @@
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  FacebookShareCount,
+  TwitterShareButton,
+  TwitterIcon,
+  GooglePlusShareButton,
+  GooglePlusIcon,
+  GooglePlusShareCount,
+} from 'react-share';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import LazyLoad from 'react-lazy-load';
@@ -25,6 +35,12 @@ const IconText = ({ type, text }) => (
 class Courses extends Component {
   render() {
     const { intl } = this.props;
+    const shareUrl = 'http://saijou.com.ph/courses';
+    const quoteText =
+      'Visit our courses available, from N5 to Business Nihongo';
+
+    const hashtagText = '#SaijouKanjiDaily';
+    console.log('shareUrl', shareUrl);
     return (
       <section className="n-section">
         <div className="Home-header">
@@ -64,6 +80,49 @@ class Courses extends Component {
               </RSOnLoad>
             )}
           />
+
+          <div className="Demo__some-network">
+            <FacebookShareButton
+              url={shareUrl}
+              quote={quoteText}
+              className="Demo__some-network__share-button"
+            >
+              <FacebookIcon size={32} round />
+            </FacebookShareButton>
+
+            <FacebookShareCount
+              url={shareUrl}
+              className="Demo__some-network__share-count"
+            >
+              {count => count}
+            </FacebookShareCount>
+          </div>
+
+          <div className="Demo__some-network">
+            <GooglePlusShareButton
+              url={shareUrl}
+              className="Demo__some-network__share-button"
+            >
+              <GooglePlusIcon size={32} round />
+            </GooglePlusShareButton>
+
+            <GooglePlusShareCount
+              url={shareUrl}
+              className="Demo__some-network__share-count"
+            >
+              {count => count}
+            </GooglePlusShareCount>
+          </div>
+
+          <div className="Demo__some-network">
+            <TwitterShareButton
+              url={shareUrl}
+              title={quoteText}
+              className="Demo__some-network__share-button"
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+          </div>
         </div>
       </section>
     );
