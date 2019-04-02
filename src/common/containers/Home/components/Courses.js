@@ -46,12 +46,10 @@ const Courses = ({ data, reduxAction, location }) => {
         <Row gutter={8} type="flex" justify="space-around" align="middle">
           {data.map(course => {
             return (
-              <Col key={course.title} xs={24} sm={12} md={6}>
+              <Col key={course.title} xs={24} sm={12} lg={6}>
                 <div className="wrapper-course">
                   <div className="wrapper-course-badgetitle">
-                    <p className="course-badgetitle">
-                      {course.badgeTitle}
-                    </p>
+                    <p className="course-badgetitle">{course.badgeTitle}</p>
                   </div>
                   <Link to="/courses" className="no-underline">
                     <LazyLoad debounce={false} offsetVertical={500}>

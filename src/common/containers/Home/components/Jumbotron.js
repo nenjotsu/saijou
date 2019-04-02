@@ -39,7 +39,7 @@ const Jumbotron = ({ media, data }) => {
             <small>最上国際研修センター</small>
           </p>
           <Link to="/contact">
-            <PrimaryButton label={data.enrollLabel} type="full" />
+            <PrimaryButton label={data.enrollLabel} />
           </Link>
           <p className={`jumbotron-text ${textClass}`}>
             <br />
