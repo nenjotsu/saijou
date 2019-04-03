@@ -19,8 +19,8 @@ class Contact extends React.Component {
        I'm interested in ${values.level}, ${values.message}
       
        Please contact me here ${values.phone}`,
-      to: 'nenjotsu@gmail.com',
-      // to: 'train@saijou-educ.com.ph',
+      // to: 'nenjotsu@gmail.com',
+      to: 'train@saijou-educ.com.ph',
     };
 
     // const domainApi = process.env.NODE_ENV ? 'localhos'
