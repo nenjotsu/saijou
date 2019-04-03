@@ -5,7 +5,7 @@
   "scripts": {
     "start": "razzle start",
     "build": "razzle build",
-    "build:prod": "PORT=80 razzle build",
+    "build:prod": "PORT=80 NODE_ENV=production razzle build",
     "start:prod": "PORT=80 NODE_ENV=production nodemon build/server.js",
     "deploy": "forever start -c nodemon build/server.js",
     "test": "razzle test --env=jsdom"
