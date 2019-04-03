@@ -1,13 +1,13 @@
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  FacebookShareCount,
-  TwitterShareButton,
-  TwitterIcon,
-  GooglePlusShareButton,
-  GooglePlusIcon,
-  GooglePlusShareCount,
-} from 'react-share';
+// import {
+//   FacebookShareButton,
+//   FacebookIcon,
+//   FacebookShareCount,
+//   TwitterShareButton,
+//   TwitterIcon,
+//   GooglePlusShareButton,
+//   GooglePlusIcon,
+//   GooglePlusShareCount,
+// } from 'react-share';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Row from 'antd/lib/row';
@@ -37,12 +37,12 @@ const IconText = ({ type, text }) => (
 class Courses extends Component {
   render() {
     const { intl } = this.props;
-    const shareUrl = 'http://saijou.com.ph/courses';
-    const quoteText =
-      'Visit our courses available, from N5 to Business Nihongo';
+    // const shareUrl = 'http://saijou.com.ph/courses';
+    // const quoteText =
+    //   'Visit our courses available, from N5 to Business Nihongo';
 
-    const hashtagText = '#SaijouKanjiDaily';
-    console.log('shareUrl', shareUrl);
+    // const hashtagText = '#SaijouKanjiDaily';
+    // console.log('shareUrl', shareUrl);
     return (
       <section className="n-section courses-bg">
         <div className="Home-header">
@@ -89,7 +89,7 @@ class Courses extends Component {
             <Col xs={0} md={2} />
           </Row>
         </div>
-        <div className="Demo__some-network">
+        {/* <div className="Demo__some-network">
           <FacebookShareButton
             url={shareUrl}
             quote={quoteText}
@@ -130,7 +130,7 @@ class Courses extends Component {
           >
             <TwitterIcon size={32} round />
           </TwitterShareButton>
-        </div>
+        </div> */}
       </section>
     );
   }

@@ -8,6 +8,8 @@
 @import '~antd/es/list/style/index.css';
 @import '~antd/es/avatar/style/index.css';
 @import '~antd/es/icon/style/index.css';
+@import '~antd/es/form/style/index.css';
+@import '~antd/es/message/style/index.css';
 
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Cabin|Domine|Inconsolata');
 
@@ -388,7 +390,6 @@ h1 > small,
   transition: all 0.2s;
   padding-right: 8px;
   padding-left: 20px;
-  padding-top: 5px;
 }
 
 .primary-btn > span {
@@ -568,6 +569,10 @@ h1 > small,
 .ant-input:hover,
 .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
   border-color: #ed2123;
+}
+
+.ant-radio-wrapper {
+  display: block !important;
 }
 
 @import './Share.css';

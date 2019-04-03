@@ -22,9 +22,13 @@ const FeaturedSensei = ({ data }) => {
             <p>{data.content}</p>
             <p>{data.subContent}</p>
             <p>- {data.name}</p>
-            {/* <a href="" className="see-more">
-              {data.seeMore}
-            </a> */}
+            <br />
+            <a
+              href="https://www.facebook.com/pg/saijou.com.ph/videos/"
+              className="see-more"
+            >
+              Watch more videos...
+            </a>
           </Col>
           <Col xs={24} md={14}>
             {/* <img

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Capture } from 'react-loadable';
-import { match } from 'react-router';
 import { getBundles } from 'react-loadable/webpack';
 import { setMobileDetect, mobileParser } from 'react-responsive-redux';
 
