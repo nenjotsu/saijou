@@ -12,10 +12,10 @@ const defaultProps = {
   intl: {},
 };
 
-// const ComingSoon = Loadable({
-//   loader: () => import('./components/ComingSoon'),
-//   loading: () => null,
-// });
+const ComingSoon = Loadable({
+  loader: () => import('./components/ComingSoon'),
+  loading: () => null,
+});
 
 const Jumbotron = Loadable({
   loader: () => import('./components/Jumbotron'),
