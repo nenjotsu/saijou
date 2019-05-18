@@ -61,12 +61,12 @@ class Home extends Component {
     const { intl, reduxAction } = this.props;
     return (
       <main>
-        {/* <section className="n-section bg-white">
+        <section className="n-section bg-white">
           <RSOnLoad>
             <ComingSoon />
           </RSOnLoad>
-        </section> */}
-        <section className="n-section-jumbotron bg-white cover-bg">
+        </section>
+        {/* <section className="n-section-jumbotron bg-white cover-bg">
           <RSOnLoad>
             <Jumbotron data={intl.messages.jumbotron} />
           </RSOnLoad>
@@ -85,14 +85,14 @@ class Home extends Component {
           <RSOnLoad>
             <FeaturedSensei data={intl.messages.featuredSensei} />
           </RSOnLoad>
-        </section>
+        </section> */}
 
         {/* <section className="n-section bg-maroon">
           <RSOnLoad>
             <LatestNews data={intl.messages.schedules} />
           </RSOnLoad>
         </section> */}
-        <section className="n-section bg-white">
+        {/* <section className="n-section bg-white">
           <RSOnLoad>
             <PhotoGallery data={intl.messages.photoGallery} />
           </RSOnLoad>
@@ -106,7 +106,7 @@ class Home extends Component {
           <RSOnLoad>
             <Partners data={intl.messages.courses} />
           </RSOnLoad>
-        </section>
+        </section> */}
       </main>
     );
   }
